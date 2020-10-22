@@ -32,6 +32,8 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Eidetic_Memory));
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.Blasters_and_Laser_Design = new System.Windows.Forms.TabPage();
+            this.lab_numweaponcost = new System.Windows.Forms.Label();
+            this.lab_weaponcost = new System.Windows.Forms.Label();
             this.lab_numLC = new System.Windows.Forms.Label();
             this.lab_LC = new System.Windows.Forms.Label();
             this.lab_numrcl = new System.Windows.Forms.Label();
@@ -237,8 +239,6 @@
             this.About = new System.Windows.Forms.TabPage();
             this.lab_about = new System.Windows.Forms.Label();
             this.tt_armour = new System.Windows.Forms.ToolTip(this.components);
-            this.lab_numweaponcost = new System.Windows.Forms.Label();
-            this.lab_weaponcost = new System.Windows.Forms.Label();
             this.tabControl1.SuspendLayout();
             this.Blasters_and_Laser_Design.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.num_cellTL)).BeginInit();
@@ -346,6 +346,24 @@
             this.Blasters_and_Laser_Design.TabIndex = 1;
             this.Blasters_and_Laser_Design.Text = "Blaster and Laser Design";
             this.Blasters_and_Laser_Design.UseVisualStyleBackColor = true;
+            // 
+            // lab_numweaponcost
+            // 
+            this.lab_numweaponcost.AutoSize = true;
+            this.lab_numweaponcost.Location = new System.Drawing.Point(900, 25);
+            this.lab_numweaponcost.Name = "lab_numweaponcost";
+            this.lab_numweaponcost.Size = new System.Drawing.Size(13, 13);
+            this.lab_numweaponcost.TabIndex = 162;
+            this.lab_numweaponcost.Text = "0";
+            // 
+            // lab_weaponcost
+            // 
+            this.lab_weaponcost.AutoSize = true;
+            this.lab_weaponcost.Location = new System.Drawing.Point(900, 6);
+            this.lab_weaponcost.Name = "lab_weaponcost";
+            this.lab_weaponcost.Size = new System.Drawing.Size(28, 13);
+            this.lab_weaponcost.TabIndex = 161;
+            this.lab_weaponcost.Text = "Cost";
             // 
             // lab_numLC
             // 
@@ -2485,27 +2503,9 @@
             this.lab_about.AutoSize = true;
             this.lab_about.Location = new System.Drawing.Point(7, 3);
             this.lab_about.Name = "lab_about";
-            this.lab_about.Size = new System.Drawing.Size(366, 364);
+            this.lab_about.Size = new System.Drawing.Size(609, 364);
             this.lab_about.TabIndex = 0;
             this.lab_about.Text = resources.GetString("lab_about.Text");
-            // 
-            // lab_numweaponcost
-            // 
-            this.lab_numweaponcost.AutoSize = true;
-            this.lab_numweaponcost.Location = new System.Drawing.Point(900, 25);
-            this.lab_numweaponcost.Name = "lab_numweaponcost";
-            this.lab_numweaponcost.Size = new System.Drawing.Size(13, 13);
-            this.lab_numweaponcost.TabIndex = 162;
-            this.lab_numweaponcost.Text = "0";
-            // 
-            // lab_weaponcost
-            // 
-            this.lab_weaponcost.AutoSize = true;
-            this.lab_weaponcost.Location = new System.Drawing.Point(900, 6);
-            this.lab_weaponcost.Name = "lab_weaponcost";
-            this.lab_weaponcost.Size = new System.Drawing.Size(28, 13);
-            this.lab_weaponcost.TabIndex = 161;
-            this.lab_weaponcost.Text = "Cost";
             // 
             // Eidetic_Memory
             // 
