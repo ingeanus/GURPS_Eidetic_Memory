@@ -13,6 +13,12 @@ Then you're good, just run the .exe to start!
 
 Don't forget that it is currently under construction so there are lots of bugs (Especially if you do not add the information Left to Right!)
 
+
+Upcoming Features :
+
+Fractional Dice damage on Blasters
+
+
 Currently Supported Resources : 
 
 Eidetic Memory: Low-Tech Armor Design (Alongside the Silk and Jade materials)
@@ -21,9 +27,10 @@ Eidetic Memory: Cutting-Edge Armor Design
 
 Eidetic Memory: Ultra-Tech Armor Design
 
-Intended Expansions :
-
 Eidetic Memory: Blasters and Laser Design
+
+
+Intended Expansions :
 
 Douglas Cole's Ballistic Firearm Design (Definitely the simplified version and MAYBE the complex one if I can figure out how to understand it!)
 
