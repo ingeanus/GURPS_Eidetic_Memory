@@ -147,4 +147,7 @@ Eidetic Memory: Ultra-Tech Armor Design in Pyramid #3/96
 Written by David L. Pulver
 Please check it out for the best experience using this!</value>
   </data>
+  <metadata name="tt_armour.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>17, 17</value>
+  </metadata>
 </root>

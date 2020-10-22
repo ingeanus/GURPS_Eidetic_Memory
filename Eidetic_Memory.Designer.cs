@@ -28,19 +28,82 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Eidetic_Memory));
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.Blasters_and_Laser_Design = new System.Windows.Forms.TabPage();
-            this.superscience_weapon = new System.Windows.Forms.CheckBox();
-            this.empty_weight_data = new System.Windows.Forms.NumericUpDown();
-            this.empty_weight = new System.Windows.Forms.Label();
-            this.damage_dice_data = new System.Windows.Forms.NumericUpDown();
-            this.damage_dice = new System.Windows.Forms.Label();
-            this.beam_type = new System.Windows.Forms.Label();
-            this.beam_type_data = new System.Windows.Forms.ComboBox();
+            this.lab_numLC = new System.Windows.Forms.Label();
+            this.lab_LC = new System.Windows.Forms.Label();
+            this.lab_numrcl = new System.Windows.Forms.Label();
+            this.lab_rcl = new System.Windows.Forms.Label();
+            this.lab_numbulk = new System.Windows.Forms.Label();
+            this.lab_bulk = new System.Windows.Forms.Label();
+            this.lab_numST = new System.Windows.Forms.Label();
+            this.lab_ST = new System.Windows.Forms.Label();
+            this.lab_numweaponweight = new System.Windows.Forms.Label();
+            this.lab_weaponweight = new System.Windows.Forms.Label();
+            this.lab_numacc = new System.Windows.Forms.Label();
+            this.lab_acc = new System.Windows.Forms.Label();
+            this.cb_nonrecharge = new System.Windows.Forms.CheckBox();
+            this.lab_numshots = new System.Windows.Forms.Label();
+            this.lab_shots = new System.Windows.Forms.Label();
+            this.num_cellTL = new System.Windows.Forms.NumericUpDown();
+            this.lab_cellTL = new System.Windows.Forms.Label();
+            this.lab_numcellcost = new System.Windows.Forms.Label();
+            this.lab_cellcost = new System.Windows.Forms.Label();
+            this.lab_numcellweight = new System.Windows.Forms.Label();
+            this.lab_cellweight = new System.Windows.Forms.Label();
+            this.lab_numbaseshots = new System.Windows.Forms.Label();
+            this.lab_baseshots = new System.Windows.Forms.Label();
+            this.cb_supersciencecell = new System.Windows.Forms.CheckBox();
+            this.num_numcells = new System.Windows.Forms.NumericUpDown();
+            this.lab_numcells = new System.Windows.Forms.Label();
+            this.lab_celltype = new System.Windows.Forms.Label();
+            this.box_celltype = new System.Windows.Forms.ComboBox();
+            this.lab_numrof = new System.Windows.Forms.Label();
+            this.lab_rof = new System.Windows.Forms.Label();
+            this.lab_numrange = new System.Windows.Forms.Label();
+            this.lab_range = new System.Windows.Forms.Label();
+            this.lab_numdamage = new System.Windows.Forms.Label();
+            this.lab_damage = new System.Windows.Forms.Label();
+            this.lab_numconfbulkmult = new System.Windows.Forms.Label();
+            this.lab_confbulkmult = new System.Windows.Forms.Label();
+            this.lab_numconfacc = new System.Windows.Forms.Label();
+            this.lab_confacc = new System.Windows.Forms.Label();
+            this.lab_numconfstmult = new System.Windows.Forms.Label();
+            this.lab_confstmult = new System.Windows.Forms.Label();
+            this.lab_conf = new System.Windows.Forms.Label();
+            this.box_conf = new System.Windows.Forms.ComboBox();
+            this.lab_numgencost = new System.Windows.Forms.Label();
+            this.lab_gencost = new System.Windows.Forms.Label();
+            this.lab_numgenrof = new System.Windows.Forms.Label();
+            this.lab_genrof = new System.Windows.Forms.Label();
+            this.lab_numgenweight = new System.Windows.Forms.Label();
+            this.lab_genweight = new System.Windows.Forms.Label();
+            this.lab_numfocusrange = new System.Windows.Forms.Label();
+            this.lab_focusrange = new System.Windows.Forms.Label();
+            this.lab_numfocusweight = new System.Windows.Forms.Label();
+            this.lab_focusweight = new System.Windows.Forms.Label();
+            this.lab_generator = new System.Windows.Forms.Label();
+            this.box_generator = new System.Windows.Forms.ComboBox();
+            this.lab_focalarray = new System.Windows.Forms.Label();
+            this.box_focalarray = new System.Windows.Forms.ComboBox();
+            this.cb_superscienceweapon = new System.Windows.Forms.CheckBox();
+            this.num_emptyweight = new System.Windows.Forms.NumericUpDown();
+            this.lab_emptyweight = new System.Windows.Forms.Label();
+            this.num_damagedice = new System.Windows.Forms.NumericUpDown();
+            this.lab_damagedice = new System.Windows.Forms.Label();
+            this.lab_beamtype = new System.Windows.Forms.Label();
+            this.box_beamtype = new System.Windows.Forms.ComboBox();
             this.lab_blasterTL = new System.Windows.Forms.Label();
             this.num_blasterTL = new System.Windows.Forms.NumericUpDown();
             this.Armour_Design = new System.Windows.Forms.TabPage();
+            this.lab_footnotes = new System.Windows.Forms.Label();
+            this.cb_legpiece = new System.Windows.Forms.CheckBox();
+            this.lab_numpieces = new System.Windows.Forms.Label();
+            this.num_numpieces = new System.Windows.Forms.NumericUpDown();
+            this.lab_numdontime = new System.Windows.Forms.Label();
+            this.lab_dontime = new System.Windows.Forms.Label();
             this.lab_numsaveloc4 = new System.Windows.Forms.Label();
             this.lab_saveloc4 = new System.Windows.Forms.Label();
             this.btn_save4 = new System.Windows.Forms.Button();
@@ -173,12 +236,18 @@
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.About = new System.Windows.Forms.TabPage();
             this.lab_about = new System.Windows.Forms.Label();
+            this.tt_armour = new System.Windows.Forms.ToolTip(this.components);
+            this.lab_numweaponcost = new System.Windows.Forms.Label();
+            this.lab_weaponcost = new System.Windows.Forms.Label();
             this.tabControl1.SuspendLayout();
             this.Blasters_and_Laser_Design.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.empty_weight_data)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.damage_dice_data)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.num_cellTL)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.num_numcells)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.num_emptyweight)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.num_damagedice)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.num_blasterTL)).BeginInit();
             this.Armour_Design.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.num_numpieces)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.num_cost)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.num_armourweight)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.num_DR)).BeginInit();
@@ -203,13 +272,71 @@
             // 
             // Blasters_and_Laser_Design
             // 
-            this.Blasters_and_Laser_Design.Controls.Add(this.superscience_weapon);
-            this.Blasters_and_Laser_Design.Controls.Add(this.empty_weight_data);
-            this.Blasters_and_Laser_Design.Controls.Add(this.empty_weight);
-            this.Blasters_and_Laser_Design.Controls.Add(this.damage_dice_data);
-            this.Blasters_and_Laser_Design.Controls.Add(this.damage_dice);
-            this.Blasters_and_Laser_Design.Controls.Add(this.beam_type);
-            this.Blasters_and_Laser_Design.Controls.Add(this.beam_type_data);
+            this.Blasters_and_Laser_Design.Controls.Add(this.lab_numweaponcost);
+            this.Blasters_and_Laser_Design.Controls.Add(this.lab_weaponcost);
+            this.Blasters_and_Laser_Design.Controls.Add(this.lab_numLC);
+            this.Blasters_and_Laser_Design.Controls.Add(this.lab_LC);
+            this.Blasters_and_Laser_Design.Controls.Add(this.lab_numrcl);
+            this.Blasters_and_Laser_Design.Controls.Add(this.lab_rcl);
+            this.Blasters_and_Laser_Design.Controls.Add(this.lab_numbulk);
+            this.Blasters_and_Laser_Design.Controls.Add(this.lab_bulk);
+            this.Blasters_and_Laser_Design.Controls.Add(this.lab_numST);
+            this.Blasters_and_Laser_Design.Controls.Add(this.lab_ST);
+            this.Blasters_and_Laser_Design.Controls.Add(this.lab_numweaponweight);
+            this.Blasters_and_Laser_Design.Controls.Add(this.lab_weaponweight);
+            this.Blasters_and_Laser_Design.Controls.Add(this.lab_numacc);
+            this.Blasters_and_Laser_Design.Controls.Add(this.lab_acc);
+            this.Blasters_and_Laser_Design.Controls.Add(this.cb_nonrecharge);
+            this.Blasters_and_Laser_Design.Controls.Add(this.lab_numshots);
+            this.Blasters_and_Laser_Design.Controls.Add(this.lab_shots);
+            this.Blasters_and_Laser_Design.Controls.Add(this.num_cellTL);
+            this.Blasters_and_Laser_Design.Controls.Add(this.lab_cellTL);
+            this.Blasters_and_Laser_Design.Controls.Add(this.lab_numcellcost);
+            this.Blasters_and_Laser_Design.Controls.Add(this.lab_cellcost);
+            this.Blasters_and_Laser_Design.Controls.Add(this.lab_numcellweight);
+            this.Blasters_and_Laser_Design.Controls.Add(this.lab_cellweight);
+            this.Blasters_and_Laser_Design.Controls.Add(this.lab_numbaseshots);
+            this.Blasters_and_Laser_Design.Controls.Add(this.lab_baseshots);
+            this.Blasters_and_Laser_Design.Controls.Add(this.cb_supersciencecell);
+            this.Blasters_and_Laser_Design.Controls.Add(this.num_numcells);
+            this.Blasters_and_Laser_Design.Controls.Add(this.lab_numcells);
+            this.Blasters_and_Laser_Design.Controls.Add(this.lab_celltype);
+            this.Blasters_and_Laser_Design.Controls.Add(this.box_celltype);
+            this.Blasters_and_Laser_Design.Controls.Add(this.lab_numrof);
+            this.Blasters_and_Laser_Design.Controls.Add(this.lab_rof);
+            this.Blasters_and_Laser_Design.Controls.Add(this.lab_numrange);
+            this.Blasters_and_Laser_Design.Controls.Add(this.lab_range);
+            this.Blasters_and_Laser_Design.Controls.Add(this.lab_numdamage);
+            this.Blasters_and_Laser_Design.Controls.Add(this.lab_damage);
+            this.Blasters_and_Laser_Design.Controls.Add(this.lab_numconfbulkmult);
+            this.Blasters_and_Laser_Design.Controls.Add(this.lab_confbulkmult);
+            this.Blasters_and_Laser_Design.Controls.Add(this.lab_numconfacc);
+            this.Blasters_and_Laser_Design.Controls.Add(this.lab_confacc);
+            this.Blasters_and_Laser_Design.Controls.Add(this.lab_numconfstmult);
+            this.Blasters_and_Laser_Design.Controls.Add(this.lab_confstmult);
+            this.Blasters_and_Laser_Design.Controls.Add(this.lab_conf);
+            this.Blasters_and_Laser_Design.Controls.Add(this.box_conf);
+            this.Blasters_and_Laser_Design.Controls.Add(this.lab_numgencost);
+            this.Blasters_and_Laser_Design.Controls.Add(this.lab_gencost);
+            this.Blasters_and_Laser_Design.Controls.Add(this.lab_numgenrof);
+            this.Blasters_and_Laser_Design.Controls.Add(this.lab_genrof);
+            this.Blasters_and_Laser_Design.Controls.Add(this.lab_numgenweight);
+            this.Blasters_and_Laser_Design.Controls.Add(this.lab_genweight);
+            this.Blasters_and_Laser_Design.Controls.Add(this.lab_numfocusrange);
+            this.Blasters_and_Laser_Design.Controls.Add(this.lab_focusrange);
+            this.Blasters_and_Laser_Design.Controls.Add(this.lab_numfocusweight);
+            this.Blasters_and_Laser_Design.Controls.Add(this.lab_focusweight);
+            this.Blasters_and_Laser_Design.Controls.Add(this.lab_generator);
+            this.Blasters_and_Laser_Design.Controls.Add(this.box_generator);
+            this.Blasters_and_Laser_Design.Controls.Add(this.lab_focalarray);
+            this.Blasters_and_Laser_Design.Controls.Add(this.box_focalarray);
+            this.Blasters_and_Laser_Design.Controls.Add(this.cb_superscienceweapon);
+            this.Blasters_and_Laser_Design.Controls.Add(this.num_emptyweight);
+            this.Blasters_and_Laser_Design.Controls.Add(this.lab_emptyweight);
+            this.Blasters_and_Laser_Design.Controls.Add(this.num_damagedice);
+            this.Blasters_and_Laser_Design.Controls.Add(this.lab_damagedice);
+            this.Blasters_and_Laser_Design.Controls.Add(this.lab_beamtype);
+            this.Blasters_and_Laser_Design.Controls.Add(this.box_beamtype);
             this.Blasters_and_Laser_Design.Controls.Add(this.lab_blasterTL);
             this.Blasters_and_Laser_Design.Controls.Add(this.num_blasterTL);
             this.Blasters_and_Laser_Design.Location = new System.Drawing.Point(4, 22);
@@ -220,82 +347,610 @@
             this.Blasters_and_Laser_Design.Text = "Blaster and Laser Design";
             this.Blasters_and_Laser_Design.UseVisualStyleBackColor = true;
             // 
-            // superscience_weapon
+            // lab_numLC
             // 
-            this.superscience_weapon.AutoSize = true;
-            this.superscience_weapon.Location = new System.Drawing.Point(11, 49);
-            this.superscience_weapon.Name = "superscience_weapon";
-            this.superscience_weapon.Size = new System.Drawing.Size(135, 17);
-            this.superscience_weapon.TabIndex = 12;
-            this.superscience_weapon.Text = "Superscience Weapon";
-            this.superscience_weapon.UseVisualStyleBackColor = true;
+            this.lab_numLC.AutoSize = true;
+            this.lab_numLC.Location = new System.Drawing.Point(1055, 25);
+            this.lab_numLC.Name = "lab_numLC";
+            this.lab_numLC.Size = new System.Drawing.Size(13, 13);
+            this.lab_numLC.TabIndex = 160;
+            this.lab_numLC.Text = "1";
             // 
-            // empty_weight_data
+            // lab_LC
             // 
-            this.empty_weight_data.DecimalPlaces = 3;
-            this.empty_weight_data.Location = new System.Drawing.Point(342, 23);
-            this.empty_weight_data.Name = "empty_weight_data";
-            this.empty_weight_data.Size = new System.Drawing.Size(69, 20);
-            this.empty_weight_data.TabIndex = 11;
+            this.lab_LC.AutoSize = true;
+            this.lab_LC.Location = new System.Drawing.Point(1055, 6);
+            this.lab_LC.Name = "lab_LC";
+            this.lab_LC.Size = new System.Drawing.Size(20, 13);
+            this.lab_LC.TabIndex = 159;
+            this.lab_LC.Text = "LC";
             // 
-            // empty_weight
+            // lab_numrcl
             // 
-            this.empty_weight.AutoSize = true;
-            this.empty_weight.Location = new System.Drawing.Point(339, 6);
-            this.empty_weight.Name = "empty_weight";
-            this.empty_weight.Size = new System.Drawing.Size(73, 13);
-            this.empty_weight.TabIndex = 10;
-            this.empty_weight.Text = "Empty Weight";
+            this.lab_numrcl.AutoSize = true;
+            this.lab_numrcl.Location = new System.Drawing.Point(871, 25);
+            this.lab_numrcl.Name = "lab_numrcl";
+            this.lab_numrcl.Size = new System.Drawing.Size(13, 13);
+            this.lab_numrcl.TabIndex = 158;
+            this.lab_numrcl.Text = "1";
             // 
-            // damage_dice_data
+            // lab_rcl
             // 
-            this.damage_dice_data.DecimalPlaces = 2;
-            this.damage_dice_data.Location = new System.Drawing.Point(253, 23);
-            this.damage_dice_data.Name = "damage_dice_data";
-            this.damage_dice_data.Size = new System.Drawing.Size(69, 20);
-            this.damage_dice_data.TabIndex = 9;
-            this.damage_dice_data.ValueChanged += new System.EventHandler(this.damage_dice_data_ValueChanged);
+            this.lab_rcl.AutoSize = true;
+            this.lab_rcl.Location = new System.Drawing.Point(871, 6);
+            this.lab_rcl.Name = "lab_rcl";
+            this.lab_rcl.Size = new System.Drawing.Size(23, 13);
+            this.lab_rcl.TabIndex = 157;
+            this.lab_rcl.Text = "Rcl";
             // 
-            // damage_dice
+            // lab_numbulk
             // 
-            this.damage_dice.AutoSize = true;
-            this.damage_dice.Location = new System.Drawing.Point(250, 6);
-            this.damage_dice.Name = "damage_dice";
-            this.damage_dice.Size = new System.Drawing.Size(72, 13);
-            this.damage_dice.TabIndex = 8;
-            this.damage_dice.Text = "Damage Dice";
+            this.lab_numbulk.AutoSize = true;
+            this.lab_numbulk.Location = new System.Drawing.Point(837, 25);
+            this.lab_numbulk.Name = "lab_numbulk";
+            this.lab_numbulk.Size = new System.Drawing.Size(13, 13);
+            this.lab_numbulk.TabIndex = 156;
+            this.lab_numbulk.Text = "0";
             // 
-            // beam_type
+            // lab_bulk
             // 
-            this.beam_type.AutoSize = true;
-            this.beam_type.Location = new System.Drawing.Point(85, 6);
-            this.beam_type.Name = "beam_type";
-            this.beam_type.Size = new System.Drawing.Size(61, 13);
-            this.beam_type.TabIndex = 3;
-            this.beam_type.Text = "Beam Type";
+            this.lab_bulk.AutoSize = true;
+            this.lab_bulk.Location = new System.Drawing.Point(837, 6);
+            this.lab_bulk.Name = "lab_bulk";
+            this.lab_bulk.Size = new System.Drawing.Size(28, 13);
+            this.lab_bulk.TabIndex = 155;
+            this.lab_bulk.Text = "Bulk";
             // 
-            // beam_type_data
+            // lab_numST
             // 
-            this.beam_type_data.FormattingEnabled = true;
-            this.beam_type_data.Items.AddRange(new object[] {
-            "Laser",
-            "Force Beam",
-            "Blaster",
-            "Neutral Particle Beam",
-            "Rainbow Laser",
-            "X-Ray Laser",
-            "Graviton Beam",
-            "Pulsar",
-            "Graser",
-            "Electrolaser",
-            "Plasma Flamer",
-            "Plasma Gun",
-            "Disintegrator"});
-            this.beam_type_data.Location = new System.Drawing.Point(88, 22);
-            this.beam_type_data.Name = "beam_type_data";
-            this.beam_type_data.Size = new System.Drawing.Size(143, 21);
-            this.beam_type_data.TabIndex = 2;
-            this.beam_type_data.SelectedIndexChanged += new System.EventHandler(this.beam_type_data_SelectedIndexChanged);
+            this.lab_numST.AutoSize = true;
+            this.lab_numST.Location = new System.Drawing.Point(810, 25);
+            this.lab_numST.Name = "lab_numST";
+            this.lab_numST.Size = new System.Drawing.Size(13, 13);
+            this.lab_numST.TabIndex = 154;
+            this.lab_numST.Text = "0";
+            // 
+            // lab_ST
+            // 
+            this.lab_ST.AutoSize = true;
+            this.lab_ST.Location = new System.Drawing.Point(810, 6);
+            this.lab_ST.Name = "lab_ST";
+            this.lab_ST.Size = new System.Drawing.Size(21, 13);
+            this.lab_ST.TabIndex = 153;
+            this.lab_ST.Text = "ST";
+            // 
+            // lab_numweaponweight
+            // 
+            this.lab_numweaponweight.AutoSize = true;
+            this.lab_numweaponweight.Location = new System.Drawing.Point(750, 25);
+            this.lab_numweaponweight.Name = "lab_numweaponweight";
+            this.lab_numweaponweight.Size = new System.Drawing.Size(13, 13);
+            this.lab_numweaponweight.TabIndex = 152;
+            this.lab_numweaponweight.Text = "0";
+            // 
+            // lab_weaponweight
+            // 
+            this.lab_weaponweight.AutoSize = true;
+            this.lab_weaponweight.Location = new System.Drawing.Point(750, 6);
+            this.lab_weaponweight.Name = "lab_weaponweight";
+            this.lab_weaponweight.Size = new System.Drawing.Size(41, 13);
+            this.lab_weaponweight.TabIndex = 151;
+            this.lab_weaponweight.Text = "Weight";
+            // 
+            // lab_numacc
+            // 
+            this.lab_numacc.AutoSize = true;
+            this.lab_numacc.Location = new System.Drawing.Point(549, 25);
+            this.lab_numacc.Name = "lab_numacc";
+            this.lab_numacc.Size = new System.Drawing.Size(13, 13);
+            this.lab_numacc.TabIndex = 150;
+            this.lab_numacc.Text = "0";
+            // 
+            // lab_acc
+            // 
+            this.lab_acc.AutoSize = true;
+            this.lab_acc.Location = new System.Drawing.Point(549, 6);
+            this.lab_acc.Name = "lab_acc";
+            this.lab_acc.Size = new System.Drawing.Size(26, 13);
+            this.lab_acc.TabIndex = 149;
+            this.lab_acc.Text = "Acc";
+            // 
+            // cb_nonrecharge
+            // 
+            this.cb_nonrecharge.AutoSize = true;
+            this.cb_nonrecharge.Location = new System.Drawing.Point(11, 309);
+            this.cb_nonrecharge.Name = "cb_nonrecharge";
+            this.cb_nonrecharge.Size = new System.Drawing.Size(122, 17);
+            this.cb_nonrecharge.TabIndex = 148;
+            this.cb_nonrecharge.Text = "Non Rechargeable?";
+            this.cb_nonrecharge.UseVisualStyleBackColor = true;
+            this.cb_nonrecharge.CheckedChanged += new System.EventHandler(this.cb_nonrecharge_CheckedChanged);
+            // 
+            // lab_numshots
+            // 
+            this.lab_numshots.AutoSize = true;
+            this.lab_numshots.Location = new System.Drawing.Point(700, 25);
+            this.lab_numshots.Name = "lab_numshots";
+            this.lab_numshots.Size = new System.Drawing.Size(13, 13);
+            this.lab_numshots.TabIndex = 147;
+            this.lab_numshots.Text = "0";
+            // 
+            // lab_shots
+            // 
+            this.lab_shots.AutoSize = true;
+            this.lab_shots.Location = new System.Drawing.Point(700, 6);
+            this.lab_shots.Name = "lab_shots";
+            this.lab_shots.Size = new System.Drawing.Size(34, 13);
+            this.lab_shots.TabIndex = 146;
+            this.lab_shots.Text = "Shots";
+            // 
+            // num_cellTL
+            // 
+            this.num_cellTL.Location = new System.Drawing.Point(170, 248);
+            this.num_cellTL.Maximum = new decimal(new int[] {
+            12,
+            0,
+            0,
+            0});
+            this.num_cellTL.Name = "num_cellTL";
+            this.num_cellTL.Size = new System.Drawing.Size(48, 20);
+            this.num_cellTL.TabIndex = 145;
+            this.num_cellTL.Value = new decimal(new int[] {
+            9,
+            0,
+            0,
+            0});
+            this.num_cellTL.ValueChanged += new System.EventHandler(this.num_cellTL_ValueChanged);
+            // 
+            // lab_cellTL
+            // 
+            this.lab_cellTL.AutoSize = true;
+            this.lab_cellTL.Location = new System.Drawing.Point(167, 231);
+            this.lab_cellTL.Name = "lab_cellTL";
+            this.lab_cellTL.Size = new System.Drawing.Size(40, 13);
+            this.lab_cellTL.TabIndex = 144;
+            this.lab_cellTL.Text = "Cell TL";
+            // 
+            // lab_numcellcost
+            // 
+            this.lab_numcellcost.AutoSize = true;
+            this.lab_numcellcost.Location = new System.Drawing.Point(338, 274);
+            this.lab_numcellcost.Name = "lab_numcellcost";
+            this.lab_numcellcost.Size = new System.Drawing.Size(13, 13);
+            this.lab_numcellcost.TabIndex = 143;
+            this.lab_numcellcost.Text = "0";
+            // 
+            // lab_cellcost
+            // 
+            this.lab_cellcost.AutoSize = true;
+            this.lab_cellcost.Location = new System.Drawing.Point(338, 255);
+            this.lab_cellcost.Name = "lab_cellcost";
+            this.lab_cellcost.Size = new System.Drawing.Size(28, 13);
+            this.lab_cellcost.TabIndex = 142;
+            this.lab_cellcost.Text = "Cost";
+            // 
+            // lab_numcellweight
+            // 
+            this.lab_numcellweight.AutoSize = true;
+            this.lab_numcellweight.Location = new System.Drawing.Point(291, 274);
+            this.lab_numcellweight.Name = "lab_numcellweight";
+            this.lab_numcellweight.Size = new System.Drawing.Size(13, 13);
+            this.lab_numcellweight.TabIndex = 141;
+            this.lab_numcellweight.Text = "0";
+            // 
+            // lab_cellweight
+            // 
+            this.lab_cellweight.AutoSize = true;
+            this.lab_cellweight.Location = new System.Drawing.Point(291, 255);
+            this.lab_cellweight.Name = "lab_cellweight";
+            this.lab_cellweight.Size = new System.Drawing.Size(41, 13);
+            this.lab_cellweight.TabIndex = 140;
+            this.lab_cellweight.Text = "Weight";
+            // 
+            // lab_numbaseshots
+            // 
+            this.lab_numbaseshots.AutoSize = true;
+            this.lab_numbaseshots.Location = new System.Drawing.Point(224, 274);
+            this.lab_numbaseshots.Name = "lab_numbaseshots";
+            this.lab_numbaseshots.Size = new System.Drawing.Size(13, 13);
+            this.lab_numbaseshots.TabIndex = 139;
+            this.lab_numbaseshots.Text = "0";
+            // 
+            // lab_baseshots
+            // 
+            this.lab_baseshots.AutoSize = true;
+            this.lab_baseshots.Location = new System.Drawing.Point(224, 255);
+            this.lab_baseshots.Name = "lab_baseshots";
+            this.lab_baseshots.Size = new System.Drawing.Size(61, 13);
+            this.lab_baseshots.TabIndex = 138;
+            this.lab_baseshots.Text = "Base Shots";
+            // 
+            // cb_supersciencecell
+            // 
+            this.cb_supersciencecell.AutoSize = true;
+            this.cb_supersciencecell.Location = new System.Drawing.Point(11, 286);
+            this.cb_supersciencecell.Name = "cb_supersciencecell";
+            this.cb_supersciencecell.Size = new System.Drawing.Size(150, 17);
+            this.cb_supersciencecell.TabIndex = 137;
+            this.cb_supersciencecell.Text = "Superscience Power Cell?";
+            this.cb_supersciencecell.UseVisualStyleBackColor = true;
+            this.cb_supersciencecell.CheckedChanged += new System.EventHandler(this.cb_supersciencecell_CheckedChanged);
+            // 
+            // num_numcells
+            // 
+            this.num_numcells.Location = new System.Drawing.Point(170, 288);
+            this.num_numcells.Name = "num_numcells";
+            this.num_numcells.Size = new System.Drawing.Size(48, 20);
+            this.num_numcells.TabIndex = 136;
+            this.num_numcells.ValueChanged += new System.EventHandler(this.num_numcells_ValueChanged);
+            // 
+            // lab_numcells
+            // 
+            this.lab_numcells.AutoSize = true;
+            this.lab_numcells.Location = new System.Drawing.Point(167, 271);
+            this.lab_numcells.Name = "lab_numcells";
+            this.lab_numcells.Size = new System.Drawing.Size(51, 13);
+            this.lab_numcells.TabIndex = 135;
+            this.lab_numcells.Text = "# of Cells";
+            // 
+            // lab_celltype
+            // 
+            this.lab_celltype.AutoSize = true;
+            this.lab_celltype.Location = new System.Drawing.Point(8, 243);
+            this.lab_celltype.Name = "lab_celltype";
+            this.lab_celltype.Size = new System.Drawing.Size(84, 13);
+            this.lab_celltype.TabIndex = 134;
+            this.lab_celltype.Text = "Power Cell Type";
+            // 
+            // box_celltype
+            // 
+            this.box_celltype.FormattingEnabled = true;
+            this.box_celltype.Items.AddRange(new object[] {
+            "A Cell",
+            "B Cell",
+            "C Cell",
+            "D Cell",
+            "E Cell",
+            "F Cell"});
+            this.box_celltype.Location = new System.Drawing.Point(11, 259);
+            this.box_celltype.Name = "box_celltype";
+            this.box_celltype.Size = new System.Drawing.Size(143, 21);
+            this.box_celltype.TabIndex = 133;
+            this.box_celltype.SelectedIndexChanged += new System.EventHandler(this.box_celltype_SelectedIndexChanged);
+            // 
+            // lab_numrof
+            // 
+            this.lab_numrof.AutoSize = true;
+            this.lab_numrof.Location = new System.Drawing.Point(667, 25);
+            this.lab_numrof.Name = "lab_numrof";
+            this.lab_numrof.Size = new System.Drawing.Size(13, 13);
+            this.lab_numrof.TabIndex = 132;
+            this.lab_numrof.Text = "0";
+            // 
+            // lab_rof
+            // 
+            this.lab_rof.AutoSize = true;
+            this.lab_rof.Location = new System.Drawing.Point(667, 6);
+            this.lab_rof.Name = "lab_rof";
+            this.lab_rof.Size = new System.Drawing.Size(27, 13);
+            this.lab_rof.TabIndex = 131;
+            this.lab_rof.Text = "RoF";
+            // 
+            // lab_numrange
+            // 
+            this.lab_numrange.AutoSize = true;
+            this.lab_numrange.Location = new System.Drawing.Point(589, 25);
+            this.lab_numrange.Name = "lab_numrange";
+            this.lab_numrange.Size = new System.Drawing.Size(13, 13);
+            this.lab_numrange.TabIndex = 130;
+            this.lab_numrange.Text = "0";
+            // 
+            // lab_range
+            // 
+            this.lab_range.AutoSize = true;
+            this.lab_range.Location = new System.Drawing.Point(589, 6);
+            this.lab_range.Name = "lab_range";
+            this.lab_range.Size = new System.Drawing.Size(39, 13);
+            this.lab_range.TabIndex = 129;
+            this.lab_range.Text = "Range";
+            // 
+            // lab_numdamage
+            // 
+            this.lab_numdamage.AutoSize = true;
+            this.lab_numdamage.Location = new System.Drawing.Point(418, 25);
+            this.lab_numdamage.Name = "lab_numdamage";
+            this.lab_numdamage.Size = new System.Drawing.Size(13, 13);
+            this.lab_numdamage.TabIndex = 128;
+            this.lab_numdamage.Text = "0";
+            // 
+            // lab_damage
+            // 
+            this.lab_damage.AutoSize = true;
+            this.lab_damage.Location = new System.Drawing.Point(418, 6);
+            this.lab_damage.Name = "lab_damage";
+            this.lab_damage.Size = new System.Drawing.Size(47, 13);
+            this.lab_damage.TabIndex = 127;
+            this.lab_damage.Text = "Damage";
+            // 
+            // lab_numconfbulkmult
+            // 
+            this.lab_numconfbulkmult.AutoSize = true;
+            this.lab_numconfbulkmult.Location = new System.Drawing.Point(272, 210);
+            this.lab_numconfbulkmult.Name = "lab_numconfbulkmult";
+            this.lab_numconfbulkmult.Size = new System.Drawing.Size(13, 13);
+            this.lab_numconfbulkmult.TabIndex = 126;
+            this.lab_numconfbulkmult.Text = "0";
+            // 
+            // lab_confbulkmult
+            // 
+            this.lab_confbulkmult.AutoSize = true;
+            this.lab_confbulkmult.Location = new System.Drawing.Point(272, 191);
+            this.lab_confbulkmult.Name = "lab_confbulkmult";
+            this.lab_confbulkmult.Size = new System.Drawing.Size(51, 13);
+            this.lab_confbulkmult.TabIndex = 125;
+            this.lab_confbulkmult.Text = "Bulk Mult";
+            // 
+            // lab_numconfacc
+            // 
+            this.lab_numconfacc.AutoSize = true;
+            this.lab_numconfacc.Location = new System.Drawing.Point(169, 210);
+            this.lab_numconfacc.Name = "lab_numconfacc";
+            this.lab_numconfacc.Size = new System.Drawing.Size(13, 13);
+            this.lab_numconfacc.TabIndex = 124;
+            this.lab_numconfacc.Text = "0";
+            // 
+            // lab_confacc
+            // 
+            this.lab_confacc.AutoSize = true;
+            this.lab_confacc.Location = new System.Drawing.Point(169, 191);
+            this.lab_confacc.Name = "lab_confacc";
+            this.lab_confacc.Size = new System.Drawing.Size(49, 13);
+            this.lab_confacc.TabIndex = 123;
+            this.lab_confacc.Text = "Acc Mult";
+            // 
+            // lab_numconfstmult
+            // 
+            this.lab_numconfstmult.AutoSize = true;
+            this.lab_numconfstmult.Location = new System.Drawing.Point(225, 210);
+            this.lab_numconfstmult.Name = "lab_numconfstmult";
+            this.lab_numconfstmult.Size = new System.Drawing.Size(13, 13);
+            this.lab_numconfstmult.TabIndex = 122;
+            this.lab_numconfstmult.Text = "0";
+            // 
+            // lab_confstmult
+            // 
+            this.lab_confstmult.AutoSize = true;
+            this.lab_confstmult.Location = new System.Drawing.Point(225, 191);
+            this.lab_confstmult.Name = "lab_confstmult";
+            this.lab_confstmult.Size = new System.Drawing.Size(44, 13);
+            this.lab_confstmult.TabIndex = 121;
+            this.lab_confstmult.Text = "ST Mult";
+            // 
+            // lab_conf
+            // 
+            this.lab_conf.AutoSize = true;
+            this.lab_conf.Location = new System.Drawing.Point(8, 191);
+            this.lab_conf.Name = "lab_conf";
+            this.lab_conf.Size = new System.Drawing.Size(69, 13);
+            this.lab_conf.TabIndex = 120;
+            this.lab_conf.Text = "Configuration";
+            // 
+            // box_conf
+            // 
+            this.box_conf.FormattingEnabled = true;
+            this.box_conf.Items.AddRange(new object[] {
+            "Beamer",
+            "Pistol",
+            "Rifle",
+            "Cannon"});
+            this.box_conf.Location = new System.Drawing.Point(11, 207);
+            this.box_conf.Name = "box_conf";
+            this.box_conf.Size = new System.Drawing.Size(143, 21);
+            this.box_conf.TabIndex = 119;
+            this.box_conf.SelectedIndexChanged += new System.EventHandler(this.box_conf_SelectedIndexChanged);
+            // 
+            // lab_numgencost
+            // 
+            this.lab_numgencost.AutoSize = true;
+            this.lab_numgencost.Location = new System.Drawing.Point(272, 158);
+            this.lab_numgencost.Name = "lab_numgencost";
+            this.lab_numgencost.Size = new System.Drawing.Size(13, 13);
+            this.lab_numgencost.TabIndex = 118;
+            this.lab_numgencost.Text = "0";
+            // 
+            // lab_gencost
+            // 
+            this.lab_gencost.AutoSize = true;
+            this.lab_gencost.Location = new System.Drawing.Point(272, 139);
+            this.lab_gencost.Name = "lab_gencost";
+            this.lab_gencost.Size = new System.Drawing.Size(28, 13);
+            this.lab_gencost.TabIndex = 117;
+            this.lab_gencost.Text = "Cost";
+            // 
+            // lab_numgenrof
+            // 
+            this.lab_numgenrof.AutoSize = true;
+            this.lab_numgenrof.Location = new System.Drawing.Point(169, 158);
+            this.lab_numgenrof.Name = "lab_numgenrof";
+            this.lab_numgenrof.Size = new System.Drawing.Size(13, 13);
+            this.lab_numgenrof.TabIndex = 116;
+            this.lab_numgenrof.Text = "0";
+            // 
+            // lab_genrof
+            // 
+            this.lab_genrof.AutoSize = true;
+            this.lab_genrof.Location = new System.Drawing.Point(169, 139);
+            this.lab_genrof.Name = "lab_genrof";
+            this.lab_genrof.Size = new System.Drawing.Size(50, 13);
+            this.lab_genrof.TabIndex = 115;
+            this.lab_genrof.Text = "Max RoF";
+            // 
+            // lab_numgenweight
+            // 
+            this.lab_numgenweight.AutoSize = true;
+            this.lab_numgenweight.Location = new System.Drawing.Point(225, 158);
+            this.lab_numgenweight.Name = "lab_numgenweight";
+            this.lab_numgenweight.Size = new System.Drawing.Size(13, 13);
+            this.lab_numgenweight.TabIndex = 114;
+            this.lab_numgenweight.Text = "0";
+            // 
+            // lab_genweight
+            // 
+            this.lab_genweight.AutoSize = true;
+            this.lab_genweight.Location = new System.Drawing.Point(225, 139);
+            this.lab_genweight.Name = "lab_genweight";
+            this.lab_genweight.Size = new System.Drawing.Size(41, 13);
+            this.lab_genweight.TabIndex = 113;
+            this.lab_genweight.Text = "Weight";
+            // 
+            // lab_numfocusrange
+            // 
+            this.lab_numfocusrange.AutoSize = true;
+            this.lab_numfocusrange.Location = new System.Drawing.Point(169, 106);
+            this.lab_numfocusrange.Name = "lab_numfocusrange";
+            this.lab_numfocusrange.Size = new System.Drawing.Size(13, 13);
+            this.lab_numfocusrange.TabIndex = 112;
+            this.lab_numfocusrange.Text = "0";
+            // 
+            // lab_focusrange
+            // 
+            this.lab_focusrange.AutoSize = true;
+            this.lab_focusrange.Location = new System.Drawing.Point(169, 87);
+            this.lab_focusrange.Name = "lab_focusrange";
+            this.lab_focusrange.Size = new System.Drawing.Size(39, 13);
+            this.lab_focusrange.TabIndex = 111;
+            this.lab_focusrange.Text = "Range";
+            // 
+            // lab_numfocusweight
+            // 
+            this.lab_numfocusweight.AutoSize = true;
+            this.lab_numfocusweight.Location = new System.Drawing.Point(214, 106);
+            this.lab_numfocusweight.Name = "lab_numfocusweight";
+            this.lab_numfocusweight.Size = new System.Drawing.Size(13, 13);
+            this.lab_numfocusweight.TabIndex = 110;
+            this.lab_numfocusweight.Text = "0";
+            // 
+            // lab_focusweight
+            // 
+            this.lab_focusweight.AutoSize = true;
+            this.lab_focusweight.Location = new System.Drawing.Point(214, 87);
+            this.lab_focusweight.Name = "lab_focusweight";
+            this.lab_focusweight.Size = new System.Drawing.Size(41, 13);
+            this.lab_focusweight.TabIndex = 109;
+            this.lab_focusweight.Text = "Weight";
+            // 
+            // lab_generator
+            // 
+            this.lab_generator.AutoSize = true;
+            this.lab_generator.Location = new System.Drawing.Point(8, 139);
+            this.lab_generator.Name = "lab_generator";
+            this.lab_generator.Size = new System.Drawing.Size(54, 13);
+            this.lab_generator.TabIndex = 16;
+            this.lab_generator.Text = "Generator";
+            // 
+            // box_generator
+            // 
+            this.box_generator.FormattingEnabled = true;
+            this.box_generator.Items.AddRange(new object[] {
+            "Single Shot",
+            "Semi Automatic",
+            "Light Automatic",
+            "Heavy Automatic",
+            "Gatling"});
+            this.box_generator.Location = new System.Drawing.Point(11, 155);
+            this.box_generator.Name = "box_generator";
+            this.box_generator.Size = new System.Drawing.Size(143, 21);
+            this.box_generator.TabIndex = 15;
+            this.box_generator.SelectedIndexChanged += new System.EventHandler(this.box_generator_SelectedIndexChanged);
+            // 
+            // lab_focalarray
+            // 
+            this.lab_focalarray.AutoSize = true;
+            this.lab_focalarray.Location = new System.Drawing.Point(8, 87);
+            this.lab_focalarray.Name = "lab_focalarray";
+            this.lab_focalarray.Size = new System.Drawing.Size(60, 13);
+            this.lab_focalarray.TabIndex = 14;
+            this.lab_focalarray.Text = "Focal Array";
+            // 
+            // box_focalarray
+            // 
+            this.box_focalarray.FormattingEnabled = true;
+            this.box_focalarray.Items.AddRange(new object[] {
+            "Tiny",
+            "Very Small",
+            "Small",
+            "Medium",
+            "Large",
+            "Very Large",
+            "Extremely Large"});
+            this.box_focalarray.Location = new System.Drawing.Point(11, 103);
+            this.box_focalarray.Name = "box_focalarray";
+            this.box_focalarray.Size = new System.Drawing.Size(143, 21);
+            this.box_focalarray.TabIndex = 13;
+            this.box_focalarray.SelectedIndexChanged += new System.EventHandler(this.box_focalarray_SelectedIndexChanged);
+            // 
+            // cb_superscienceweapon
+            // 
+            this.cb_superscienceweapon.AutoSize = true;
+            this.cb_superscienceweapon.Location = new System.Drawing.Point(11, 49);
+            this.cb_superscienceweapon.Name = "cb_superscienceweapon";
+            this.cb_superscienceweapon.Size = new System.Drawing.Size(141, 17);
+            this.cb_superscienceweapon.TabIndex = 12;
+            this.cb_superscienceweapon.Text = "Superscience Weapon?";
+            this.cb_superscienceweapon.UseVisualStyleBackColor = true;
+            // 
+            // num_emptyweight
+            // 
+            this.num_emptyweight.DecimalPlaces = 3;
+            this.num_emptyweight.Location = new System.Drawing.Point(342, 23);
+            this.num_emptyweight.Name = "num_emptyweight";
+            this.num_emptyweight.Size = new System.Drawing.Size(69, 20);
+            this.num_emptyweight.TabIndex = 11;
+            // 
+            // lab_emptyweight
+            // 
+            this.lab_emptyweight.AutoSize = true;
+            this.lab_emptyweight.Location = new System.Drawing.Point(339, 6);
+            this.lab_emptyweight.Name = "lab_emptyweight";
+            this.lab_emptyweight.Size = new System.Drawing.Size(73, 13);
+            this.lab_emptyweight.TabIndex = 10;
+            this.lab_emptyweight.Text = "Empty Weight";
+            // 
+            // num_damagedice
+            // 
+            this.num_damagedice.DecimalPlaces = 2;
+            this.num_damagedice.Location = new System.Drawing.Point(253, 23);
+            this.num_damagedice.Name = "num_damagedice";
+            this.num_damagedice.Size = new System.Drawing.Size(69, 20);
+            this.num_damagedice.TabIndex = 9;
+            this.num_damagedice.ValueChanged += new System.EventHandler(this.damage_dice_data_ValueChanged);
+            // 
+            // lab_damagedice
+            // 
+            this.lab_damagedice.AutoSize = true;
+            this.lab_damagedice.Location = new System.Drawing.Point(250, 6);
+            this.lab_damagedice.Name = "lab_damagedice";
+            this.lab_damagedice.Size = new System.Drawing.Size(72, 13);
+            this.lab_damagedice.TabIndex = 8;
+            this.lab_damagedice.Text = "Damage Dice";
+            // 
+            // lab_beamtype
+            // 
+            this.lab_beamtype.AutoSize = true;
+            this.lab_beamtype.Location = new System.Drawing.Point(85, 6);
+            this.lab_beamtype.Name = "lab_beamtype";
+            this.lab_beamtype.Size = new System.Drawing.Size(61, 13);
+            this.lab_beamtype.TabIndex = 3;
+            this.lab_beamtype.Text = "Beam Type";
+            // 
+            // box_beamtype
+            // 
+            this.box_beamtype.FormattingEnabled = true;
+            this.box_beamtype.Location = new System.Drawing.Point(88, 22);
+            this.box_beamtype.Name = "box_beamtype";
+            this.box_beamtype.Size = new System.Drawing.Size(143, 21);
+            this.box_beamtype.TabIndex = 2;
+            this.box_beamtype.SelectedIndexChanged += new System.EventHandler(this.beam_type_data_SelectedIndexChanged);
             // 
             // lab_blasterTL
             // 
@@ -309,12 +964,29 @@
             // num_blasterTL
             // 
             this.num_blasterTL.Location = new System.Drawing.Point(7, 22);
+            this.num_blasterTL.Maximum = new decimal(new int[] {
+            12,
+            0,
+            0,
+            0});
             this.num_blasterTL.Name = "num_blasterTL";
             this.num_blasterTL.Size = new System.Drawing.Size(57, 20);
             this.num_blasterTL.TabIndex = 0;
+            this.num_blasterTL.Value = new decimal(new int[] {
+            9,
+            0,
+            0,
+            0});
+            this.num_blasterTL.ValueChanged += new System.EventHandler(this.num_blasterTL_ValueChanged);
             // 
             // Armour_Design
             // 
+            this.Armour_Design.Controls.Add(this.lab_footnotes);
+            this.Armour_Design.Controls.Add(this.cb_legpiece);
+            this.Armour_Design.Controls.Add(this.lab_numpieces);
+            this.Armour_Design.Controls.Add(this.num_numpieces);
+            this.Armour_Design.Controls.Add(this.lab_numdontime);
+            this.Armour_Design.Controls.Add(this.lab_dontime);
             this.Armour_Design.Controls.Add(this.lab_numsaveloc4);
             this.Armour_Design.Controls.Add(this.lab_saveloc4);
             this.Armour_Design.Controls.Add(this.btn_save4);
@@ -453,10 +1125,64 @@
             this.Armour_Design.Text = "Armour Design";
             this.Armour_Design.UseVisualStyleBackColor = true;
             // 
+            // lab_footnotes
+            // 
+            this.lab_footnotes.AutoSize = true;
+            this.lab_footnotes.Location = new System.Drawing.Point(479, 84);
+            this.lab_footnotes.Name = "lab_footnotes";
+            this.lab_footnotes.Size = new System.Drawing.Size(0, 13);
+            this.lab_footnotes.TabIndex = 168;
+            // 
+            // cb_legpiece
+            // 
+            this.cb_legpiece.AutoSize = true;
+            this.cb_legpiece.Location = new System.Drawing.Point(156, 69);
+            this.cb_legpiece.Name = "cb_legpiece";
+            this.cb_legpiece.Size = new System.Drawing.Size(293, 17);
+            this.cb_legpiece.TabIndex = 167;
+            this.cb_legpiece.Text = "Single Piece covers Leg Location & Any Other Locations?";
+            this.cb_legpiece.UseVisualStyleBackColor = true;
+            this.cb_legpiece.Visible = false;
+            this.cb_legpiece.CheckedChanged += new System.EventHandler(this.cb_legpiece_CheckedChanged);
+            // 
+            // lab_numpieces
+            // 
+            this.lab_numpieces.AutoSize = true;
+            this.lab_numpieces.Location = new System.Drawing.Point(3, 50);
+            this.lab_numpieces.Name = "lab_numpieces";
+            this.lab_numpieces.Size = new System.Drawing.Size(49, 13);
+            this.lab_numpieces.TabIndex = 166;
+            this.lab_numpieces.Text = "# Pieces";
+            // 
+            // num_numpieces
+            // 
+            this.num_numpieces.Location = new System.Drawing.Point(7, 66);
+            this.num_numpieces.Name = "num_numpieces";
+            this.num_numpieces.Size = new System.Drawing.Size(57, 20);
+            this.num_numpieces.TabIndex = 165;
+            this.num_numpieces.ValueChanged += new System.EventHandler(this.num_numpieces_ValueChanged);
+            // 
+            // lab_numdontime
+            // 
+            this.lab_numdontime.AutoSize = true;
+            this.lab_numdontime.Location = new System.Drawing.Point(899, 64);
+            this.lab_numdontime.Name = "lab_numdontime";
+            this.lab_numdontime.Size = new System.Drawing.Size(0, 13);
+            this.lab_numdontime.TabIndex = 164;
+            // 
+            // lab_dontime
+            // 
+            this.lab_dontime.AutoSize = true;
+            this.lab_dontime.Location = new System.Drawing.Point(889, 45);
+            this.lab_dontime.Name = "lab_dontime";
+            this.lab_dontime.Size = new System.Drawing.Size(53, 13);
+            this.lab_dontime.TabIndex = 163;
+            this.lab_dontime.Text = "Don Time";
+            // 
             // lab_numsaveloc4
             // 
             this.lab_numsaveloc4.AutoSize = true;
-            this.lab_numsaveloc4.Location = new System.Drawing.Point(479, 476);
+            this.lab_numsaveloc4.Location = new System.Drawing.Point(479, 538);
             this.lab_numsaveloc4.Name = "lab_numsaveloc4";
             this.lab_numsaveloc4.Size = new System.Drawing.Size(0, 13);
             this.lab_numsaveloc4.TabIndex = 161;
@@ -464,7 +1190,7 @@
             // lab_saveloc4
             // 
             this.lab_saveloc4.AutoSize = true;
-            this.lab_saveloc4.Location = new System.Drawing.Point(479, 460);
+            this.lab_saveloc4.Location = new System.Drawing.Point(479, 522);
             this.lab_saveloc4.Name = "lab_saveloc4";
             this.lab_saveloc4.Size = new System.Drawing.Size(53, 13);
             this.lab_saveloc4.TabIndex = 160;
@@ -472,7 +1198,7 @@
             // 
             // btn_save4
             // 
-            this.btn_save4.Location = new System.Drawing.Point(1004, 433);
+            this.btn_save4.Location = new System.Drawing.Point(1004, 495);
             this.btn_save4.Name = "btn_save4";
             this.btn_save4.Size = new System.Drawing.Size(75, 23);
             this.btn_save4.TabIndex = 159;
@@ -483,7 +1209,7 @@
             // lab_numsaveconceal4
             // 
             this.lab_numsaveconceal4.AutoSize = true;
-            this.lab_numsaveconceal4.Location = new System.Drawing.Point(763, 443);
+            this.lab_numsaveconceal4.Location = new System.Drawing.Point(763, 505);
             this.lab_numsaveconceal4.Name = "lab_numsaveconceal4";
             this.lab_numsaveconceal4.Size = new System.Drawing.Size(0, 13);
             this.lab_numsaveconceal4.TabIndex = 158;
@@ -491,7 +1217,7 @@
             // lab_saveconceal4
             // 
             this.lab_saveconceal4.AutoSize = true;
-            this.lab_saveconceal4.Location = new System.Drawing.Point(763, 427);
+            this.lab_saveconceal4.Location = new System.Drawing.Point(763, 489);
             this.lab_saveconceal4.Name = "lab_saveconceal4";
             this.lab_saveconceal4.Size = new System.Drawing.Size(72, 13);
             this.lab_saveconceal4.TabIndex = 157;
@@ -500,7 +1226,7 @@
             // lab_numsavenotes4
             // 
             this.lab_numsavenotes4.AutoSize = true;
-            this.lab_numsavenotes4.Location = new System.Drawing.Point(667, 443);
+            this.lab_numsavenotes4.Location = new System.Drawing.Point(667, 505);
             this.lab_numsavenotes4.Name = "lab_numsavenotes4";
             this.lab_numsavenotes4.Size = new System.Drawing.Size(13, 13);
             this.lab_numsavenotes4.TabIndex = 156;
@@ -509,7 +1235,7 @@
             // lab_nsavenotes4
             // 
             this.lab_nsavenotes4.AutoSize = true;
-            this.lab_nsavenotes4.Location = new System.Drawing.Point(667, 427);
+            this.lab_nsavenotes4.Location = new System.Drawing.Point(667, 489);
             this.lab_nsavenotes4.Name = "lab_nsavenotes4";
             this.lab_nsavenotes4.Size = new System.Drawing.Size(35, 13);
             this.lab_nsavenotes4.TabIndex = 155;
@@ -518,7 +1244,7 @@
             // lab_numsavecost4
             // 
             this.lab_numsavecost4.AutoSize = true;
-            this.lab_numsavecost4.Location = new System.Drawing.Point(568, 443);
+            this.lab_numsavecost4.Location = new System.Drawing.Point(568, 505);
             this.lab_numsavecost4.Name = "lab_numsavecost4";
             this.lab_numsavecost4.Size = new System.Drawing.Size(13, 13);
             this.lab_numsavecost4.TabIndex = 154;
@@ -527,7 +1253,7 @@
             // lab_savecost4
             // 
             this.lab_savecost4.AutoSize = true;
-            this.lab_savecost4.Location = new System.Drawing.Point(568, 427);
+            this.lab_savecost4.Location = new System.Drawing.Point(568, 489);
             this.lab_savecost4.Name = "lab_savecost4";
             this.lab_savecost4.Size = new System.Drawing.Size(28, 13);
             this.lab_savecost4.TabIndex = 153;
@@ -536,7 +1262,7 @@
             // lab_numsaveweight4
             // 
             this.lab_numsaveweight4.AutoSize = true;
-            this.lab_numsaveweight4.Location = new System.Drawing.Point(517, 443);
+            this.lab_numsaveweight4.Location = new System.Drawing.Point(517, 505);
             this.lab_numsaveweight4.Name = "lab_numsaveweight4";
             this.lab_numsaveweight4.Size = new System.Drawing.Size(13, 13);
             this.lab_numsaveweight4.TabIndex = 152;
@@ -545,7 +1271,7 @@
             // lab_saveweight4
             // 
             this.lab_saveweight4.AutoSize = true;
-            this.lab_saveweight4.Location = new System.Drawing.Point(517, 427);
+            this.lab_saveweight4.Location = new System.Drawing.Point(517, 489);
             this.lab_saveweight4.Name = "lab_saveweight4";
             this.lab_saveweight4.Size = new System.Drawing.Size(41, 13);
             this.lab_saveweight4.TabIndex = 151;
@@ -554,7 +1280,7 @@
             // lab_numsavedr4
             // 
             this.lab_numsavedr4.AutoSize = true;
-            this.lab_numsavedr4.Location = new System.Drawing.Point(479, 443);
+            this.lab_numsavedr4.Location = new System.Drawing.Point(479, 505);
             this.lab_numsavedr4.Name = "lab_numsavedr4";
             this.lab_numsavedr4.Size = new System.Drawing.Size(13, 13);
             this.lab_numsavedr4.TabIndex = 150;
@@ -563,7 +1289,7 @@
             // lab_savedr4
             // 
             this.lab_savedr4.AutoSize = true;
-            this.lab_savedr4.Location = new System.Drawing.Point(479, 427);
+            this.lab_savedr4.Location = new System.Drawing.Point(479, 489);
             this.lab_savedr4.Name = "lab_savedr4";
             this.lab_savedr4.Size = new System.Drawing.Size(23, 13);
             this.lab_savedr4.TabIndex = 149;
@@ -572,7 +1298,7 @@
             // lab_numsaveloc3
             // 
             this.lab_numsaveloc3.AutoSize = true;
-            this.lab_numsaveloc3.Location = new System.Drawing.Point(479, 391);
+            this.lab_numsaveloc3.Location = new System.Drawing.Point(479, 453);
             this.lab_numsaveloc3.Name = "lab_numsaveloc3";
             this.lab_numsaveloc3.Size = new System.Drawing.Size(0, 13);
             this.lab_numsaveloc3.TabIndex = 148;
@@ -580,7 +1306,7 @@
             // label14
             // 
             this.label14.AutoSize = true;
-            this.label14.Location = new System.Drawing.Point(479, 375);
+            this.label14.Location = new System.Drawing.Point(479, 437);
             this.label14.Name = "label14";
             this.label14.Size = new System.Drawing.Size(53, 13);
             this.label14.TabIndex = 147;
@@ -588,7 +1314,7 @@
             // 
             // btn_save3
             // 
-            this.btn_save3.Location = new System.Drawing.Point(1004, 348);
+            this.btn_save3.Location = new System.Drawing.Point(1004, 410);
             this.btn_save3.Name = "btn_save3";
             this.btn_save3.Size = new System.Drawing.Size(75, 23);
             this.btn_save3.TabIndex = 146;
@@ -599,7 +1325,7 @@
             // lab_numsaveconceal3
             // 
             this.lab_numsaveconceal3.AutoSize = true;
-            this.lab_numsaveconceal3.Location = new System.Drawing.Point(763, 358);
+            this.lab_numsaveconceal3.Location = new System.Drawing.Point(763, 420);
             this.lab_numsaveconceal3.Name = "lab_numsaveconceal3";
             this.lab_numsaveconceal3.Size = new System.Drawing.Size(0, 13);
             this.lab_numsaveconceal3.TabIndex = 145;
@@ -607,7 +1333,7 @@
             // lab_saveconceal3
             // 
             this.lab_saveconceal3.AutoSize = true;
-            this.lab_saveconceal3.Location = new System.Drawing.Point(763, 342);
+            this.lab_saveconceal3.Location = new System.Drawing.Point(763, 404);
             this.lab_saveconceal3.Name = "lab_saveconceal3";
             this.lab_saveconceal3.Size = new System.Drawing.Size(72, 13);
             this.lab_saveconceal3.TabIndex = 144;
@@ -616,7 +1342,7 @@
             // lab_numsavenotes3
             // 
             this.lab_numsavenotes3.AutoSize = true;
-            this.lab_numsavenotes3.Location = new System.Drawing.Point(667, 358);
+            this.lab_numsavenotes3.Location = new System.Drawing.Point(667, 420);
             this.lab_numsavenotes3.Name = "lab_numsavenotes3";
             this.lab_numsavenotes3.Size = new System.Drawing.Size(13, 13);
             this.lab_numsavenotes3.TabIndex = 143;
@@ -625,7 +1351,7 @@
             // lab_savenotes3
             // 
             this.lab_savenotes3.AutoSize = true;
-            this.lab_savenotes3.Location = new System.Drawing.Point(667, 342);
+            this.lab_savenotes3.Location = new System.Drawing.Point(667, 404);
             this.lab_savenotes3.Name = "lab_savenotes3";
             this.lab_savenotes3.Size = new System.Drawing.Size(35, 13);
             this.lab_savenotes3.TabIndex = 142;
@@ -634,7 +1360,7 @@
             // lab_numsavecost3
             // 
             this.lab_numsavecost3.AutoSize = true;
-            this.lab_numsavecost3.Location = new System.Drawing.Point(568, 358);
+            this.lab_numsavecost3.Location = new System.Drawing.Point(568, 420);
             this.lab_numsavecost3.Name = "lab_numsavecost3";
             this.lab_numsavecost3.Size = new System.Drawing.Size(13, 13);
             this.lab_numsavecost3.TabIndex = 141;
@@ -643,7 +1369,7 @@
             // lab_savecost3
             // 
             this.lab_savecost3.AutoSize = true;
-            this.lab_savecost3.Location = new System.Drawing.Point(568, 342);
+            this.lab_savecost3.Location = new System.Drawing.Point(568, 404);
             this.lab_savecost3.Name = "lab_savecost3";
             this.lab_savecost3.Size = new System.Drawing.Size(28, 13);
             this.lab_savecost3.TabIndex = 140;
@@ -652,7 +1378,7 @@
             // lab_numsaveweight3
             // 
             this.lab_numsaveweight3.AutoSize = true;
-            this.lab_numsaveweight3.Location = new System.Drawing.Point(517, 358);
+            this.lab_numsaveweight3.Location = new System.Drawing.Point(517, 420);
             this.lab_numsaveweight3.Name = "lab_numsaveweight3";
             this.lab_numsaveweight3.Size = new System.Drawing.Size(13, 13);
             this.lab_numsaveweight3.TabIndex = 139;
@@ -661,7 +1387,7 @@
             // lab_saveweight3
             // 
             this.lab_saveweight3.AutoSize = true;
-            this.lab_saveweight3.Location = new System.Drawing.Point(517, 342);
+            this.lab_saveweight3.Location = new System.Drawing.Point(517, 404);
             this.lab_saveweight3.Name = "lab_saveweight3";
             this.lab_saveweight3.Size = new System.Drawing.Size(41, 13);
             this.lab_saveweight3.TabIndex = 138;
@@ -670,7 +1396,7 @@
             // lab_numsavedr3
             // 
             this.lab_numsavedr3.AutoSize = true;
-            this.lab_numsavedr3.Location = new System.Drawing.Point(479, 358);
+            this.lab_numsavedr3.Location = new System.Drawing.Point(479, 420);
             this.lab_numsavedr3.Name = "lab_numsavedr3";
             this.lab_numsavedr3.Size = new System.Drawing.Size(13, 13);
             this.lab_numsavedr3.TabIndex = 137;
@@ -679,7 +1405,7 @@
             // lab_savedr3
             // 
             this.lab_savedr3.AutoSize = true;
-            this.lab_savedr3.Location = new System.Drawing.Point(479, 342);
+            this.lab_savedr3.Location = new System.Drawing.Point(479, 404);
             this.lab_savedr3.Name = "lab_savedr3";
             this.lab_savedr3.Size = new System.Drawing.Size(23, 13);
             this.lab_savedr3.TabIndex = 136;
@@ -688,7 +1414,7 @@
             // lab_numsaveloc2
             // 
             this.lab_numsaveloc2.AutoSize = true;
-            this.lab_numsaveloc2.Location = new System.Drawing.Point(478, 305);
+            this.lab_numsaveloc2.Location = new System.Drawing.Point(478, 367);
             this.lab_numsaveloc2.Name = "lab_numsaveloc2";
             this.lab_numsaveloc2.Size = new System.Drawing.Size(0, 13);
             this.lab_numsaveloc2.TabIndex = 135;
@@ -696,7 +1422,7 @@
             // lab_saveloc2
             // 
             this.lab_saveloc2.AutoSize = true;
-            this.lab_saveloc2.Location = new System.Drawing.Point(478, 289);
+            this.lab_saveloc2.Location = new System.Drawing.Point(478, 351);
             this.lab_saveloc2.Name = "lab_saveloc2";
             this.lab_saveloc2.Size = new System.Drawing.Size(53, 13);
             this.lab_saveloc2.TabIndex = 134;
@@ -705,7 +1431,7 @@
             // lab_numsaveloc1
             // 
             this.lab_numsaveloc1.AutoSize = true;
-            this.lab_numsaveloc1.Location = new System.Drawing.Point(478, 225);
+            this.lab_numsaveloc1.Location = new System.Drawing.Point(478, 287);
             this.lab_numsaveloc1.Name = "lab_numsaveloc1";
             this.lab_numsaveloc1.Size = new System.Drawing.Size(0, 13);
             this.lab_numsaveloc1.TabIndex = 133;
@@ -713,7 +1439,7 @@
             // lab_saveloc1
             // 
             this.lab_saveloc1.AutoSize = true;
-            this.lab_saveloc1.Location = new System.Drawing.Point(478, 209);
+            this.lab_saveloc1.Location = new System.Drawing.Point(478, 271);
             this.lab_saveloc1.Name = "lab_saveloc1";
             this.lab_saveloc1.Size = new System.Drawing.Size(53, 13);
             this.lab_saveloc1.TabIndex = 132;
@@ -721,7 +1447,7 @@
             // 
             // btn_save2
             // 
-            this.btn_save2.Location = new System.Drawing.Point(1003, 262);
+            this.btn_save2.Location = new System.Drawing.Point(1003, 324);
             this.btn_save2.Name = "btn_save2";
             this.btn_save2.Size = new System.Drawing.Size(75, 23);
             this.btn_save2.TabIndex = 131;
@@ -732,7 +1458,7 @@
             // lab_numsaveconceal2
             // 
             this.lab_numsaveconceal2.AutoSize = true;
-            this.lab_numsaveconceal2.Location = new System.Drawing.Point(762, 272);
+            this.lab_numsaveconceal2.Location = new System.Drawing.Point(762, 334);
             this.lab_numsaveconceal2.Name = "lab_numsaveconceal2";
             this.lab_numsaveconceal2.Size = new System.Drawing.Size(0, 13);
             this.lab_numsaveconceal2.TabIndex = 130;
@@ -740,7 +1466,7 @@
             // lab_saveconceal2
             // 
             this.lab_saveconceal2.AutoSize = true;
-            this.lab_saveconceal2.Location = new System.Drawing.Point(762, 256);
+            this.lab_saveconceal2.Location = new System.Drawing.Point(762, 318);
             this.lab_saveconceal2.Name = "lab_saveconceal2";
             this.lab_saveconceal2.Size = new System.Drawing.Size(72, 13);
             this.lab_saveconceal2.TabIndex = 129;
@@ -749,7 +1475,7 @@
             // lab_numsavenotes2
             // 
             this.lab_numsavenotes2.AutoSize = true;
-            this.lab_numsavenotes2.Location = new System.Drawing.Point(666, 272);
+            this.lab_numsavenotes2.Location = new System.Drawing.Point(666, 334);
             this.lab_numsavenotes2.Name = "lab_numsavenotes2";
             this.lab_numsavenotes2.Size = new System.Drawing.Size(13, 13);
             this.lab_numsavenotes2.TabIndex = 128;
@@ -758,7 +1484,7 @@
             // lab_savenotes2
             // 
             this.lab_savenotes2.AutoSize = true;
-            this.lab_savenotes2.Location = new System.Drawing.Point(666, 256);
+            this.lab_savenotes2.Location = new System.Drawing.Point(666, 318);
             this.lab_savenotes2.Name = "lab_savenotes2";
             this.lab_savenotes2.Size = new System.Drawing.Size(35, 13);
             this.lab_savenotes2.TabIndex = 127;
@@ -767,7 +1493,7 @@
             // lab_numsavecost2
             // 
             this.lab_numsavecost2.AutoSize = true;
-            this.lab_numsavecost2.Location = new System.Drawing.Point(567, 272);
+            this.lab_numsavecost2.Location = new System.Drawing.Point(567, 334);
             this.lab_numsavecost2.Name = "lab_numsavecost2";
             this.lab_numsavecost2.Size = new System.Drawing.Size(13, 13);
             this.lab_numsavecost2.TabIndex = 126;
@@ -776,7 +1502,7 @@
             // lab_savecost2
             // 
             this.lab_savecost2.AutoSize = true;
-            this.lab_savecost2.Location = new System.Drawing.Point(567, 256);
+            this.lab_savecost2.Location = new System.Drawing.Point(567, 318);
             this.lab_savecost2.Name = "lab_savecost2";
             this.lab_savecost2.Size = new System.Drawing.Size(28, 13);
             this.lab_savecost2.TabIndex = 125;
@@ -785,7 +1511,7 @@
             // lab_numsaveweight2
             // 
             this.lab_numsaveweight2.AutoSize = true;
-            this.lab_numsaveweight2.Location = new System.Drawing.Point(516, 272);
+            this.lab_numsaveweight2.Location = new System.Drawing.Point(516, 334);
             this.lab_numsaveweight2.Name = "lab_numsaveweight2";
             this.lab_numsaveweight2.Size = new System.Drawing.Size(13, 13);
             this.lab_numsaveweight2.TabIndex = 124;
@@ -794,7 +1520,7 @@
             // lab_saveweight2
             // 
             this.lab_saveweight2.AutoSize = true;
-            this.lab_saveweight2.Location = new System.Drawing.Point(516, 256);
+            this.lab_saveweight2.Location = new System.Drawing.Point(516, 318);
             this.lab_saveweight2.Name = "lab_saveweight2";
             this.lab_saveweight2.Size = new System.Drawing.Size(41, 13);
             this.lab_saveweight2.TabIndex = 123;
@@ -803,7 +1529,7 @@
             // lab_numsavedr2
             // 
             this.lab_numsavedr2.AutoSize = true;
-            this.lab_numsavedr2.Location = new System.Drawing.Point(478, 272);
+            this.lab_numsavedr2.Location = new System.Drawing.Point(478, 334);
             this.lab_numsavedr2.Name = "lab_numsavedr2";
             this.lab_numsavedr2.Size = new System.Drawing.Size(13, 13);
             this.lab_numsavedr2.TabIndex = 122;
@@ -812,7 +1538,7 @@
             // lab_savedr2
             // 
             this.lab_savedr2.AutoSize = true;
-            this.lab_savedr2.Location = new System.Drawing.Point(478, 256);
+            this.lab_savedr2.Location = new System.Drawing.Point(478, 318);
             this.lab_savedr2.Name = "lab_savedr2";
             this.lab_savedr2.Size = new System.Drawing.Size(23, 13);
             this.lab_savedr2.TabIndex = 121;
@@ -820,7 +1546,7 @@
             // 
             // btn_save1
             // 
-            this.btn_save1.Location = new System.Drawing.Point(1003, 176);
+            this.btn_save1.Location = new System.Drawing.Point(1003, 238);
             this.btn_save1.Name = "btn_save1";
             this.btn_save1.Size = new System.Drawing.Size(75, 23);
             this.btn_save1.TabIndex = 120;
@@ -831,7 +1557,7 @@
             // lab_numsaveconceal1
             // 
             this.lab_numsaveconceal1.AutoSize = true;
-            this.lab_numsaveconceal1.Location = new System.Drawing.Point(762, 186);
+            this.lab_numsaveconceal1.Location = new System.Drawing.Point(762, 248);
             this.lab_numsaveconceal1.Name = "lab_numsaveconceal1";
             this.lab_numsaveconceal1.Size = new System.Drawing.Size(0, 13);
             this.lab_numsaveconceal1.TabIndex = 119;
@@ -839,7 +1565,7 @@
             // lab_saveconceal1
             // 
             this.lab_saveconceal1.AutoSize = true;
-            this.lab_saveconceal1.Location = new System.Drawing.Point(762, 170);
+            this.lab_saveconceal1.Location = new System.Drawing.Point(762, 232);
             this.lab_saveconceal1.Name = "lab_saveconceal1";
             this.lab_saveconceal1.Size = new System.Drawing.Size(72, 13);
             this.lab_saveconceal1.TabIndex = 118;
@@ -848,7 +1574,7 @@
             // lab_numsavenotes1
             // 
             this.lab_numsavenotes1.AutoSize = true;
-            this.lab_numsavenotes1.Location = new System.Drawing.Point(666, 186);
+            this.lab_numsavenotes1.Location = new System.Drawing.Point(666, 248);
             this.lab_numsavenotes1.Name = "lab_numsavenotes1";
             this.lab_numsavenotes1.Size = new System.Drawing.Size(13, 13);
             this.lab_numsavenotes1.TabIndex = 117;
@@ -857,7 +1583,7 @@
             // lab_savenotes1
             // 
             this.lab_savenotes1.AutoSize = true;
-            this.lab_savenotes1.Location = new System.Drawing.Point(666, 170);
+            this.lab_savenotes1.Location = new System.Drawing.Point(666, 232);
             this.lab_savenotes1.Name = "lab_savenotes1";
             this.lab_savenotes1.Size = new System.Drawing.Size(35, 13);
             this.lab_savenotes1.TabIndex = 116;
@@ -866,7 +1592,7 @@
             // lab_numsavecost1
             // 
             this.lab_numsavecost1.AutoSize = true;
-            this.lab_numsavecost1.Location = new System.Drawing.Point(567, 186);
+            this.lab_numsavecost1.Location = new System.Drawing.Point(567, 248);
             this.lab_numsavecost1.Name = "lab_numsavecost1";
             this.lab_numsavecost1.Size = new System.Drawing.Size(13, 13);
             this.lab_numsavecost1.TabIndex = 115;
@@ -875,7 +1601,7 @@
             // lab_savecost1
             // 
             this.lab_savecost1.AutoSize = true;
-            this.lab_savecost1.Location = new System.Drawing.Point(567, 170);
+            this.lab_savecost1.Location = new System.Drawing.Point(567, 232);
             this.lab_savecost1.Name = "lab_savecost1";
             this.lab_savecost1.Size = new System.Drawing.Size(28, 13);
             this.lab_savecost1.TabIndex = 114;
@@ -884,7 +1610,7 @@
             // lab_numsaveweight1
             // 
             this.lab_numsaveweight1.AutoSize = true;
-            this.lab_numsaveweight1.Location = new System.Drawing.Point(516, 186);
+            this.lab_numsaveweight1.Location = new System.Drawing.Point(516, 248);
             this.lab_numsaveweight1.Name = "lab_numsaveweight1";
             this.lab_numsaveweight1.Size = new System.Drawing.Size(13, 13);
             this.lab_numsaveweight1.TabIndex = 113;
@@ -893,7 +1619,7 @@
             // lab_saveweight1
             // 
             this.lab_saveweight1.AutoSize = true;
-            this.lab_saveweight1.Location = new System.Drawing.Point(516, 170);
+            this.lab_saveweight1.Location = new System.Drawing.Point(516, 232);
             this.lab_saveweight1.Name = "lab_saveweight1";
             this.lab_saveweight1.Size = new System.Drawing.Size(41, 13);
             this.lab_saveweight1.TabIndex = 112;
@@ -902,7 +1628,7 @@
             // lab_numsavedr1
             // 
             this.lab_numsavedr1.AutoSize = true;
-            this.lab_numsavedr1.Location = new System.Drawing.Point(478, 186);
+            this.lab_numsavedr1.Location = new System.Drawing.Point(478, 248);
             this.lab_numsavedr1.Name = "lab_numsavedr1";
             this.lab_numsavedr1.Size = new System.Drawing.Size(13, 13);
             this.lab_numsavedr1.TabIndex = 111;
@@ -911,7 +1637,7 @@
             // lab_savedr1
             // 
             this.lab_savedr1.AutoSize = true;
-            this.lab_savedr1.Location = new System.Drawing.Point(478, 170);
+            this.lab_savedr1.Location = new System.Drawing.Point(478, 232);
             this.lab_savedr1.Name = "lab_savedr1";
             this.lab_savedr1.Size = new System.Drawing.Size(23, 13);
             this.lab_savedr1.TabIndex = 110;
@@ -1724,6 +2450,11 @@
             // num_armourTL
             // 
             this.num_armourTL.Location = new System.Drawing.Point(7, 22);
+            this.num_armourTL.Maximum = new decimal(new int[] {
+            12,
+            0,
+            0,
+            0});
             this.num_armourTL.Name = "num_armourTL";
             this.num_armourTL.Size = new System.Drawing.Size(57, 20);
             this.num_armourTL.TabIndex = 2;
@@ -1758,6 +2489,24 @@
             this.lab_about.TabIndex = 0;
             this.lab_about.Text = resources.GetString("lab_about.Text");
             // 
+            // lab_numweaponcost
+            // 
+            this.lab_numweaponcost.AutoSize = true;
+            this.lab_numweaponcost.Location = new System.Drawing.Point(900, 25);
+            this.lab_numweaponcost.Name = "lab_numweaponcost";
+            this.lab_numweaponcost.Size = new System.Drawing.Size(13, 13);
+            this.lab_numweaponcost.TabIndex = 162;
+            this.lab_numweaponcost.Text = "0";
+            // 
+            // lab_weaponcost
+            // 
+            this.lab_weaponcost.AutoSize = true;
+            this.lab_weaponcost.Location = new System.Drawing.Point(900, 6);
+            this.lab_weaponcost.Name = "lab_weaponcost";
+            this.lab_weaponcost.Size = new System.Drawing.Size(28, 13);
+            this.lab_weaponcost.TabIndex = 161;
+            this.lab_weaponcost.Text = "Cost";
+            // 
             // Eidetic_Memory
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -1769,11 +2518,14 @@
             this.tabControl1.ResumeLayout(false);
             this.Blasters_and_Laser_Design.ResumeLayout(false);
             this.Blasters_and_Laser_Design.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.empty_weight_data)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.damage_dice_data)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.num_cellTL)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.num_numcells)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.num_emptyweight)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.num_damagedice)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.num_blasterTL)).EndInit();
             this.Armour_Design.ResumeLayout(false);
             this.Armour_Design.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.num_numpieces)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.num_cost)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.num_armourweight)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.num_DR)).EndInit();
@@ -1796,13 +2548,13 @@
         private System.Windows.Forms.TabPage About;
         private System.Windows.Forms.Label lab_blasterTL;
         private System.Windows.Forms.NumericUpDown num_blasterTL;
-        private System.Windows.Forms.Label beam_type;
-        private System.Windows.Forms.ComboBox beam_type_data;
-        private System.Windows.Forms.Label damage_dice;
-        private System.Windows.Forms.NumericUpDown damage_dice_data;
-        private System.Windows.Forms.NumericUpDown empty_weight_data;
-        private System.Windows.Forms.Label empty_weight;
-        private System.Windows.Forms.CheckBox superscience_weapon;
+        private System.Windows.Forms.Label lab_beamtype;
+        private System.Windows.Forms.ComboBox box_beamtype;
+        private System.Windows.Forms.Label lab_damagedice;
+        private System.Windows.Forms.NumericUpDown num_damagedice;
+        private System.Windows.Forms.NumericUpDown num_emptyweight;
+        private System.Windows.Forms.Label lab_emptyweight;
+        private System.Windows.Forms.CheckBox cb_superscienceweapon;
         private System.Windows.Forms.Label lab_armourTL;
         private System.Windows.Forms.NumericUpDown num_armourTL;
         private System.Windows.Forms.CheckBox cb_rhand;
@@ -1934,6 +2686,71 @@
         private System.Windows.Forms.Label lab_savedr3;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label lab_about;
+        private System.Windows.Forms.Label lab_numdontime;
+        private System.Windows.Forms.Label lab_dontime;
+        private System.Windows.Forms.Label lab_numpieces;
+        private System.Windows.Forms.NumericUpDown num_numpieces;
+        private System.Windows.Forms.CheckBox cb_legpiece;
+        private System.Windows.Forms.ToolTip tt_armour;
+        private System.Windows.Forms.Label lab_footnotes;
+        private System.Windows.Forms.Label lab_generator;
+        private System.Windows.Forms.ComboBox box_generator;
+        private System.Windows.Forms.Label lab_focalarray;
+        private System.Windows.Forms.ComboBox box_focalarray;
+        private System.Windows.Forms.Label lab_numfocusweight;
+        private System.Windows.Forms.Label lab_focusweight;
+        private System.Windows.Forms.Label lab_numfocusrange;
+        private System.Windows.Forms.Label lab_focusrange;
+        private System.Windows.Forms.Label lab_numgencost;
+        private System.Windows.Forms.Label lab_gencost;
+        private System.Windows.Forms.Label lab_numgenrof;
+        private System.Windows.Forms.Label lab_genrof;
+        private System.Windows.Forms.Label lab_numgenweight;
+        private System.Windows.Forms.Label lab_genweight;
+        private System.Windows.Forms.Label lab_numconfbulkmult;
+        private System.Windows.Forms.Label lab_confbulkmult;
+        private System.Windows.Forms.Label lab_numconfacc;
+        private System.Windows.Forms.Label lab_confacc;
+        private System.Windows.Forms.Label lab_numconfstmult;
+        private System.Windows.Forms.Label lab_confstmult;
+        private System.Windows.Forms.Label lab_conf;
+        private System.Windows.Forms.ComboBox box_conf;
+        private System.Windows.Forms.Label lab_numdamage;
+        private System.Windows.Forms.Label lab_damage;
+        private System.Windows.Forms.Label lab_numrange;
+        private System.Windows.Forms.Label lab_range;
+        private System.Windows.Forms.Label lab_numrof;
+        private System.Windows.Forms.Label lab_rof;
+        private System.Windows.Forms.NumericUpDown num_numcells;
+        private System.Windows.Forms.Label lab_numcells;
+        private System.Windows.Forms.Label lab_celltype;
+        private System.Windows.Forms.ComboBox box_celltype;
+        private System.Windows.Forms.CheckBox cb_supersciencecell;
+        private System.Windows.Forms.Label lab_numbaseshots;
+        private System.Windows.Forms.Label lab_baseshots;
+        private System.Windows.Forms.Label lab_numcellweight;
+        private System.Windows.Forms.Label lab_cellweight;
+        private System.Windows.Forms.Label lab_numcellcost;
+        private System.Windows.Forms.Label lab_cellcost;
+        private System.Windows.Forms.NumericUpDown num_cellTL;
+        private System.Windows.Forms.Label lab_cellTL;
+        private System.Windows.Forms.Label lab_numshots;
+        private System.Windows.Forms.Label lab_shots;
+        private System.Windows.Forms.CheckBox cb_nonrecharge;
+        private System.Windows.Forms.Label lab_numacc;
+        private System.Windows.Forms.Label lab_acc;
+        private System.Windows.Forms.Label lab_numweaponweight;
+        private System.Windows.Forms.Label lab_weaponweight;
+        private System.Windows.Forms.Label lab_numST;
+        private System.Windows.Forms.Label lab_ST;
+        private System.Windows.Forms.Label lab_numbulk;
+        private System.Windows.Forms.Label lab_bulk;
+        private System.Windows.Forms.Label lab_numrcl;
+        private System.Windows.Forms.Label lab_rcl;
+        private System.Windows.Forms.Label lab_numLC;
+        private System.Windows.Forms.Label lab_LC;
+        private System.Windows.Forms.Label lab_numweaponcost;
+        private System.Windows.Forms.Label lab_weaponcost;
     }
 }
 

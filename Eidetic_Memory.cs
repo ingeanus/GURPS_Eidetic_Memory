@@ -4,6 +4,7 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Security.Cryptography.X509Certificates;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -16,17 +17,17 @@ namespace Eidetic_Memory
         {
             { "Energy Cloth", new Materials(12, 0.014, 1, 500, 500, 240, 120, "—", "F", "F/O", "") },
             { "Monocrys", new Materials(11, 0.018, 3, 150, 75, 184, 92, "—", "F", "F/O", "The full DR only applies vs. piercing and cutting damage.") },
-            { "Retro-Reflective Armour",  new Materials(11, 0.0025, 10000000, 1500, 1500, 1666, 166, "—", "F", "F/O", "The armor’s DR only applies vs. microwave and (in cinematic games) visible and near-infrared laser beams. It has 0 DR vs. other damage types.") },
+            { "Retro-Reflective Armour",  new Materials(11, 0.0025, 10000000, 1500, 1500, 1666, 166, "—", "F", "F/O", "The armor’s DR only applies vs. microwave and (in cinematic games) \nvisible and near-infrared laser beams. It has 0 DR vs. other damage types.") },
             { "Bioplas", new Materials(10, 0.015, 3, 600, 300, 278, 92, "—", "B,F,T", "F/O", "The full DR only applies vs. piercing and burn damage.") },
-            { "Nano-Ablative Polymer", new Materials(10, 0.012, 6, 150, 75, 275, 128, "—", "E,F", "F/O", "The full DR only applies against burning damage from lasers (including X-ray, gamma-ray, etc.).") },
+            { "Nano-Ablative Polymer", new Materials(10, 0.012, 6, 150, 75, 275, 128, "—", "E,F", "F/O", "The full DR only applies against burning damage from lasers \n(including X-ray, gamma-ray, etc.).") },
             { "Advanced Nanoweave", new Materials(10, 0.024, 3, 150, 75, 138, 70, "—", "F", "F/O", "The full DR only applies vs. piercing and burn damage.") },
             { "Arachnoweave", new Materials(9, 0.03, 4, 600, 120, 96, 48, "—", "F", "F/O", "The full DR only applies against piercing and cutting damage.") },
             { "Basic Nanoweave", new Materials(9, 0.03, 3, 750, 150, 110, 55, "—", "F", "F/O", "The full DR only applies against piercing and cutting damage.")},
-            { "Laser-Ablative Polymer", new Materials(9, 0.018, 6, 150, 75, 128, 64, "—", "F,E", "F/O", "The full DR only applies against burning damage from lasers (including X-ray, gamma-ray, etc.).") },
+            { "Laser-Ablative Polymer", new Materials(9, 0.018, 6, 150, 75, 128, 64, "—", "F,E", "F/O", "The full DR only applies against burning damage from lasers \n(including X-ray, gamma-ray, etc.).") },
             { "Magnetic Liquid Armour", new Materials(9, 0.032, 2, 200, 100, 90, 45, "—", "F", "F/O", "The full DR only applies against piercing and cutting damage.") },
-            { "Reflec", new Materials(9, 0.005, 10000000, 150, 150, 833, 83, "—", "F", "F/O", "The armor’s DR only applies vs. microwave and (in cinematic games) visible and near-infrared laser beams. It has 0 DR vs. other damage types.") },
+            { "Reflec", new Materials(9, 0.005, 10000000, 150, 150, 833, 83, "—", "F", "F/O", "The armor’s DR only applies vs. microwave and (in cinematic games) \nvisible and near-infrared laser beams. It has 0 DR vs. other damage types.") },
             { "STF Liquid Armour", new Materials(9, 0.032, 1, 150, 75, 90, 45, "—", "F", "F/O", "") },
-            { "Aramid Fabric", new Materials(8, 0.04, 4, 240, 240, 58, 24, "—", "B,F", "F/O", "The full DR only applies against piercing and cutting damage. The #3/52 article MULTIPLIED damage vs pi and cut, in contrast to all other materials which DIVIDE against others. This was standardized to the other materials! As well, TL 6+ Construction methods were added in Pyramid #3/85, but I added them to this! It's original is F/L not F/O!") },
+            { "Aramid Fabric", new Materials(8, 0.04, 4, 240, 240, 58, 24, "—", "F", "F/O", "The full DR only applies against piercing and cutting damage. \nThe #3/52 article MULTIPLIED damage vs pi and cut, in contrast to all other materials \nwhich DIVIDE against others. This was standardized to the other materials! Also, \nTL 6+ Construction methods were added in Pyramid #3/85, but I added them to this! \nIt's original is F/L not F/O!") },
             { "Ballistic Polymer", new Materials(8, 0.06, 2.5, 200, 50, 48, 24, "—", "F", "F/O", "The full DR only applies against piercing and cutting damage.") },
             { "Improved Ballistic Polymer",  new Materials(8, 0.04, 2.5, 250, 100, 75, 36, "—", "F", "F/O", "The full DR only applies against piercing and cutting damage.") },
             { "Kevlar",  new Materials(8, .1, 4, 80, 20, 33, 16, "—", "F", "F/O", "The full DR only applies against piercing and cutting damage.") },
@@ -36,9 +37,9 @@ namespace Eidetic_Memory
             { "Nomex",  new Materials(7, .066, 4, 50, 25, 10, 5, "—", "F", "F/O", "The full DR only applies against burning damage.") },
             { "Nylon",  new Materials(7, .5, 1, 25, 6, 6, 3, "—", "F", "F/O", "")},
             { "Rubber",  new Materials(6, .45, 2, 5, 5, 14, 7, "—", "C,F,S", "F/O", "If assigned DR 2 or more, the full DR only applies against crushing damage.") },
-            { "Cloth",  new Materials(0, .85, 1, 8, 8, 4, 4, "—", "C,F", "F", "The armor material is flexible if it has no more than 25% of its rated DR per inch. Flexible armor provides flexible DR, but can be donned in 2/3 the usual time.") },
-            { "Leather",  new Materials(0, .9, 1, 10, 10, 8, 4, "—", "F", "F/L/SC", "The armor material is flexible if it has no more than 25% of its rated DR per inch. Flexible armor provides flexible DR, but can be donned in 2/3 the usual time.") },
-            { "Silk",  new Materials(0, .85, 1, 100, 100, 4, 4, "—", "C,F", "F/L", "The armor material is flexible if it has no more than 25% of its rated DR per inch. Flexible armor provides flexible DR, but can be donned in 2/3 the usual time.") }
+            { "Cloth",  new Materials(0, .85, 1, 8, 8, 4, 4, "—", "C,F", "F", "") },
+            { "Leather",  new Materials(0, .9, 1, 10, 10, 8, 4, "—", "F", "F/L/SC", "") },
+            { "Silk",  new Materials(0, .85, 1, 100, 100, 4, 4, "—", "C,F", "F/L", "") }
         };
 
         public Dictionary<String, Materials> rigid_mats = new Dictionary<String, Materials>()
@@ -118,40 +119,73 @@ namespace Eidetic_Memory
             {"Segmented Plate", new List<string>(){"R/S", "P/SC/S"} }
         };
 
+        public Dictionary<String, String> note_desc = new Dictionary<string, string>()
+        {
+            {"F", "The armour material is flexible if it has no more than 25% of its rated DR per inch. \nFlexible armour provides flexible DR, but can be donned in 2/3 the usual time.\n" },
+            {"S", "The armour is semi-ablative.\n" },
+            {"C", "The armour is combustible. If DR is penetrated by burning damage it can catch fire. \nTreat the armour as resistant to fire (B433).\n" },
+            {"E", "The armour is energy-ablatve. Treat the armour as ablative DR vs damage from \nlasers, plasma, fusion guns, or flamers.\n" },
+            {"T", "The armour CAN be transparent at double material cost. \nIf transparent, it has 0 DR against visible light laser beams and against any blinding attack.\n" },
+            {"B", "The armour is biotech, capable of sealing punctures and rips. In addition, at DR 15+ bioplas \ncan greatly reduce the cost of weight of an extended life-support system.\n" },
+            {"L", "The armour is compodite laminate. If the armour has at least half the max DR, \nit will be doubled against shaped-charge warheads and plasma bolts.\n" },
+            {"M", "The armour is electromagnetic. Its DR protects only against shaped-charge and \nplasma bolt weapons. Attacks failing to penetrate the DR of any armour \ninstalled over the EM armour don't trigger the EM.\n" }
+        };
+
+        public Dictionary<String, Beams> beam_types = new Dictionary<string, Beams>()
+        {
+            { "Disintegrator", new Beams(12, 12, "inf", "cor", 32, 0.7, 6.25, 25, 100, 400, 3, 400000, 6) },
+            { "Graser", new Beams(12, 12, "10", "tight burn, sur", 3, 6000, 28, 112, 450, 1800, 3, 1500, 6) },
+            { "Mind Disrupter", new Beams(12, 12, "contact", "aff", 2.75, 2.5, 27.8125, 111.25, 445, 1780, 3, 1780, 6) },
+            { "Pulsar", new Beams(11, 12, "3", "cr exp, rad, sur", 6, 8, 135, 540, 2160, 8640, 2, 3000, 5) },
+            { "Rainbow Laser", new Beams(11, 11, "3", "tight burn", 3, 56, 112.5, 450, 1800, 7200, 3, 500, 6) },
+            { "X-Ray Laser", new Beams(11, 11, "5", "tight burn, sur", 3, 2000, 112.5, 450, 1800, 7200, 3, 1000, 6) },
+            { "Graviton Beam", new Beams(11, 11, "inf", "cr, nokb", 1.5, 100, 14, 56, 225, 900, 3, 2000, 6) },
+            { "Neural Disrupter", new Beams(11, 11, "contact", "aff", 2.75, 2.5, 111.25, 445, 1780, 7120, 3, 1780, 6) },
+            { "Plasma Gun", new Beams(11, 11, "2", "burn, sur", 7.5, 6.7, 1031.25, 4125, 16500, 66000, 3, 16500, 4) },
+            { "Blaster", new Beams(10, 11, "5", "tight burn, sur", 3, 32, 34, 135, 540, 2160, 3, 2000, 5) },
+            { "Neutral Particle Beam", new Beams(10, 11, "1", "tight burn, sur, rad", 3, 32, 17, 68, 270, 1080, 3, 3000, 5) },
+            { "Force Beam", new Beams(10, 10, "1", "cr, dbkb", 4, 11, 270, 1080, 4320, 17280, 4, 500, 6) },
+            { "Sonic Stunner", new Beams(10, 10, "5", "aff", 2.75, 3.5, 445, 1780, 7120, 28480, 3, 1780, 3) },
+            { "Laser", new Beams(9, 9, "2", "tight burn", 3, 40, 225, 900, 3600, 14400, 3, 500, 6) },
+            { "Electrolaser", new Beams(9, 9, "2", "aff", 3.3, 5, 2300, 9200, 36800, 147200, 3, 2300, 4) },
+            { "Sonic Screamer", new Beams(9, 9, "1", "aff", 2.75, 2, 1780, 7120, 28480, 113920, 3, 1780, 3) },
+            { "Plasma Flamer", new Beams(9, 9, "1", "burn", 3, 2, 1780, 7120, 28480, 113920, 3, 1780, 0) },
+        };
+
+        public Dictionary<String, Focuses> focus_arrays = new Dictionary<string, Focuses>()
+        {
+            { "Tiny", new Focuses(0.1, 0.25) },
+            { "Very Small", new Focuses(0.25, 0.5) },
+            { "Small", new Focuses(0.5, 0.8) },
+            { "Medium", new Focuses(1, 1) },
+            { "Large", new Focuses(1.5, 1.25) },
+            { "Very Large", new Focuses(2, 1.6) },
+            { "Extremely Large", new Focuses(4, 2) }
+        };
+
+        public Dictionary<String, Generators> generator_options = new Dictionary<string, Generators>()
+        {
+            { "Single Shot", new Generators(1, 1, 1) },
+            { "Semi Automatic", new Generators(3, 1.25, 1) },
+            { "Light Automatic", new Generators(10, 1.25, 2) },
+            { "Heavy Automatic", new Generators(20, 2, 2) },
+            { "Gatling", new Generators(20, 2, 2) }
+        };
+
+        public Dictionary<String, Configurations> configuration_options = new Dictionary<string, Configurations>()
+        {
+            { "Beamer", new Configurations(0.5, 3.3, 1) },
+            { "Pistol", new Configurations(1, 3.3, 1.25) },
+            { "Rifle", new Configurations(2, 2.2, 1.5) },
+            { "Cannon", new Configurations(3, 2.4, 1.5) }
+        };
+        
+
         public Eidetic_Memory()
         {
             InitializeComponent();
-        }
-
-        private double calculate_empty_weight()
-        {
-            double damage_dice = Decimal.ToDouble(damage_dice_data.Value);
-            double superscience = 1;
-            double energy_density = 3;
-            double focal_weight = 1;
-            double generator_weight = 1;
-
-            if (superscience_weapon.Checked)
-            {
-                superscience = 0.5;
-            }
-
-            if (beam_type_data.SelectedIndex == 7) // Pulsar
-            {
-                energy_density = 6;
-            }
-            else if (beam_type_data.SelectedIndex == 1) // Force Beam
-            {
-                energy_density = 4;
-            }
-            else if (beam_type_data.SelectedIndex == 6) // Graviton
-            {
-                energy_density = 1.5;
-            }
-
-            double weight = Math.Pow((damage_dice * superscience / energy_density), 3) * focal_weight * generator_weight;
-
-            return weight;
+            get_Armour_Materials();
+            get_Beam_Types();
         }
 
         private void calculate_surface_area()
@@ -185,31 +219,6 @@ namespace Eidetic_Memory
             if (cb_rfoot.Checked) { sa += 0.35; }
             if (cb_lfoot.Checked) { sa += 0.35; }
             num_surfacearea.Value = Convert.ToDecimal(sa) * sa_mult;
-        }
-
-        private void damage_dice_data_ValueChanged(object sender, EventArgs e)
-        {
-            empty_weight_data.Value = Convert.ToDecimal(calculate_empty_weight());
-        }
-
-        private void beam_type_data_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            empty_weight_data.Value = Convert.ToDecimal(calculate_empty_weight());
-        }
-
-        private void focal_array_data_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            empty_weight_data.Value = Convert.ToDecimal(calculate_empty_weight());
-        }
-
-        private void generator_data_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            empty_weight_data.Value = Convert.ToDecimal(calculate_empty_weight());
-        }
-
-        private void Blasters_and_Laser_Design_Click(object sender, EventArgs e)
-        {
-
         }
 
         private void cb_rarm_CheckedChanged(object sender, EventArgs e)
@@ -272,6 +281,7 @@ namespace Eidetic_Memory
             cb_rthigh.Checked = check;
             cb_rknee.Checked = check;
             cb_rshin.Checked = check;
+            cb_legpiece.Visible = check;
 
             calculate_surface_area();
         }
@@ -282,6 +292,7 @@ namespace Eidetic_Memory
             cb_lthigh.Checked = check;
             cb_lknee.Checked = check;
             cb_lshin.Checked = check;
+            cb_legpiece.Visible = check;
 
             calculate_surface_area();
         }
@@ -435,31 +446,37 @@ namespace Eidetic_Memory
 
         private void cb_rthigh_CheckedChanged(object sender, EventArgs e)
         {
+            cb_legpiece.Visible = cb_rthigh.Checked;
             calculate_surface_area();
         }
 
         private void cb_rknee_CheckedChanged(object sender, EventArgs e)
         {
+            cb_legpiece.Visible = cb_rknee.Checked;
             calculate_surface_area();
         }
 
         private void cb_rshin_CheckedChanged(object sender, EventArgs e)
         {
+            cb_legpiece.Visible = cb_rshin.Checked;
             calculate_surface_area();
         }
 
         private void cb_lthigh_CheckedChanged(object sender, EventArgs e)
         {
+            cb_legpiece.Visible = cb_lthigh.Checked;
             calculate_surface_area();
         }
 
         private void cb_lknee_CheckedChanged(object sender, EventArgs e)
         {
+            cb_legpiece.Visible = cb_lknee.Checked;
             calculate_surface_area();
         }
 
         private void cb_lshin_CheckedChanged(object sender, EventArgs e)
         {
+            cb_legpiece.Visible = cb_lshin.Checked;
             calculate_surface_area();
         }
 
@@ -610,6 +627,16 @@ namespace Eidetic_Memory
             lab_nummindr.Text = mat.minDR;
             lab_numnotes.Text = mat.notes;
             lab_numconstroptions.Text = mat.construction;
+            lab_footnotes.Text = "";
+            foreach (string key in note_desc.Keys)
+            {
+                if (mat.notes.Contains(key))
+                {
+                    lab_footnotes.Text = lab_footnotes.Text + note_desc[key];
+                }
+            }
+            lab_footnotes.Text = lab_footnotes.Text + mat.footnotes;
+            tt_armour.SetToolTip(lab_notes, mat.footnotes);
         }
 
         private void get_Construction_Stats()
@@ -918,6 +945,294 @@ namespace Eidetic_Memory
             lab_numsavenotes4.Text = lab_numnotes.Text;
             lab_numsaveloc4.Text = return_locations();
         }
+
+        private void num_blasterTL_ValueChanged(object sender, EventArgs e)
+        {
+            get_Beam_Types();
+            get_Cell_Stats();
+        }
+
+        private void num_numpieces_ValueChanged(object sender, EventArgs e)
+        {
+            decimal num = num_numpieces.Value * 3 + ((cb_legpiece.Checked) ? ((cb_rigid.Checked) ? 12 : 3) : 0);
+
+            lab_numdontime.Text = num.ToString();
+
+            get_Weapon_Stats();
+        }
+
+        private void cb_legpiece_CheckedChanged(object sender, EventArgs e)
+        {
+            decimal num = num_numpieces.Value * 3 + ((cb_legpiece.Checked) ? ((cb_rigid.Checked) ? 12 : 3) : 0);
+
+            lab_numdontime.Text = num.ToString();
+        }
+
+        private void damage_dice_data_ValueChanged(object sender, EventArgs e)
+        {
+            get_Empty_Weight();
+            get_Weapon_Stats();
+        }
+
+        private void beam_type_data_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            affliction();
+            get_Empty_Weight();
+            get_Weapon_Stats();
+            get_Cell_Stats();
+        }
+
+        private void box_focalarray_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            get_Focus_Stats();
+            get_Empty_Weight();
+            get_Weapon_Stats();
+        }
+
+        private void box_generator_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            get_Generator_Stats();
+            get_Empty_Weight();
+            get_Weapon_Stats();
+        }
+
+        private void box_conf_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            get_Configuration_Stats();
+            get_Weapon_Stats();
+        }
+
+        private void box_celltype_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            get_Cell_Stats();
+            get_Weapon_Stats();
+        }
+
+        private void cb_supersciencecell_CheckedChanged(object sender, EventArgs e)
+        {
+            get_Cell_Stats();
+            get_Weapon_Stats();
+        }
+
+        private void num_cellTL_ValueChanged(object sender, EventArgs e)
+        {
+            get_Cell_Stats();
+            get_Weapon_Stats();
+        }
+
+        private void num_numcells_ValueChanged(object sender, EventArgs e)
+        {
+            get_Cell_Stats();
+            get_Weapon_Stats();
+        }
+
+        private void cb_nonrecharge_CheckedChanged(object sender, EventArgs e)
+        {
+            get_Cell_Stats();
+            get_Weapon_Stats();
+        }
+
+        private void get_Empty_Weight()
+        {
+            try
+            {
+                double damage_dice = Decimal.ToDouble(num_damagedice.Value);
+                double superscience = cb_superscienceweapon.Checked ? 0.5 : 1;
+                Beams wep = beam_types[box_beamtype.Text];
+                double focal_weight = Double.Parse(lab_numfocusweight.Text);
+                double generator_weight = Double.Parse(lab_numgenweight.Text);
+
+                double weight = Math.Pow(damage_dice * superscience / wep.weightDiv, 3) * focal_weight * generator_weight;
+
+                num_emptyweight.Value = Convert.ToDecimal(weight);
+            }
+            catch (Exception e)
+            {
+
+            }
+        }
+
+        private void get_Beam_Types()
+        {
+            decimal TL = num_blasterTL.Value;
+
+            box_beamtype.Items.Clear();
+
+            foreach (var weapon in beam_types)
+            {
+                if (TL >= weapon.Value.TL)
+                {
+                    box_beamtype.Items.Add(weapon.Key);
+                }
+            }            
+        }
+
+        private void get_Focus_Stats()
+        {
+            Focuses foc = focus_arrays[box_focalarray.Text];
+
+            lab_numfocusrange.Text = foc.range.ToString();
+            lab_numfocusweight.Text = foc.weight.ToString();
+        }
+
+        private void get_Generator_Stats()
+        {
+            Generators gen = generator_options[box_generator.Text];
+
+            lab_numgenrof.Text = gen.rof.ToString();
+            lab_numgenweight.Text = gen.weight.ToString();
+            lab_numgencost.Text = gen.cost.ToString();
+        }
+
+        private void get_Configuration_Stats()
+        {
+            Configurations conf = configuration_options[box_conf.Text];
+
+            lab_numconfacc.Text = conf.accMult.ToString();
+            lab_numconfstmult.Text = conf.stmult.ToString();
+            lab_numconfbulkmult.Text = conf.bulkmult.ToString();
+        }
+
+        private bool affliction()
+        {
+            if (box_beamtype.Text == "Electrolaser" || box_beamtype.Text == "Sonic Screamer" || box_beamtype.Text == "Sonic Stunner" || box_beamtype.Text == "Neural Disrupter" || box_beamtype.Text == "Mind Disruptor")
+            {
+                lab_damagedice.Text = "Aff Penalty";
+                return true;
+            }
+            else
+            {
+                lab_damagedice.Text = "Damage Dice";
+                return false;
+            }
+        }
+
+        private void get_Cell_Stats()
+        {
+            try
+            {
+                Beams beam = beam_types[box_beamtype.Text];
+                int cellTL = Decimal.ToInt32(num_cellTL.Value);
+                int num = Decimal.ToInt32(num_numcells.Value);
+                double baseShots;
+                bool superscience = cb_supersciencecell.Checked;
+                bool highTL = (beam.TL < num_blasterTL.Value);
+                bool nonRecharge = cb_nonrecharge.Checked;
+                int size = box_celltype.SelectedIndex-2;
+
+                if (cellTL == 9)
+                {
+                    baseShots = beam.shots1 * Math.Pow(10, size);
+                    lab_numbaseshots.Text = (baseShots * num * (highTL ? 2 : 1) * (nonRecharge ? 2 : 1) * (superscience ? 5 : 1)).ToString();
+                }
+                else if (cellTL == 10)
+                {
+                    baseShots = beam.shots2 * Math.Pow(10, size);
+                    lab_numbaseshots.Text = (baseShots * num * (highTL ? 2 : 1) * (nonRecharge ? 2 : 1) * (superscience ? 5 : 1)).ToString();
+                }
+                else if (cellTL == 11)
+                {
+                    baseShots = beam.shots3 * Math.Pow(10, size);
+                    lab_numbaseshots.Text = (baseShots * num * (highTL ? 2 : 1) * (nonRecharge ? 2 : 1) * (superscience ? 5 : 1)).ToString();
+                }
+                else
+                {
+                    baseShots = beam.shots4 * Math.Pow(10, size);
+                    lab_numbaseshots.Text = (baseShots * num * (highTL ? 2 : 1) * (nonRecharge ? 2 : 1) * (superscience ? 5 : 1)).ToString();
+                }
+
+                if (size <= 2)
+                {
+                    lab_numcellweight.Text = (Math.Pow(10, size) * 0.5 * num).ToString();
+                }
+                else
+                {
+                    lab_numcellweight.Text = (Math.Pow(10, size) * 0.02 * num).ToString();
+                }
+
+                if (size < 1)
+                {
+                    lab_numcellcost.Text = "$" + ((4 + size) * num).ToString();
+                }
+                else if (size < 3)
+                {
+                    lab_numcellcost.Text = "$" + (Math.Pow(10, size) * num).ToString();
+                }
+                else
+                {
+                    lab_numcellcost.Text = "$" + (Math.Pow(10, size) * 2 * num).ToString();
+                }
+            }
+            catch (Exception e)
+            {
+
+            }
+        }
+
+        private void get_Weapon_Stats()
+        {
+            try
+            {
+                string beamType = box_beamtype.Text;
+                Beams beam = beam_types[beamType];
+                Focuses foc = focus_arrays[box_focalarray.Text];
+                Generators gen = generator_options[box_generator.Text];
+                Configurations conf = configuration_options[box_conf.Text];
+                decimal dmg = num_damagedice.Value;
+                double range;
+                int cellIndex = box_celltype.SelectedIndex;
+                String elec;
+
+                if (dmg >= 8)
+                {
+                    elec = "1d-1";
+                }
+                else if (dmg >= 6)
+                {
+                    elec = "1d-2";
+                }
+                else
+                {
+                    elec = "1d-3";
+                }
+
+                if (affliction())
+                {
+                    lab_numdamage.Text = ((beamType == "Mind Disrupter" || beamType == "Neural Disrupter") ? "Will" : "HT") + "-" + Decimal.ToInt32(dmg) + ((beamType == "Electrolaser") ? " follow-up " + elec : "");
+                }
+                else
+                {
+                    lab_numdamage.Text = dmg.ToString() + "d" + ((beam.armourDiv != "inf" && Int32.Parse(beam.armourDiv) > 1) ? "(" + beam.armourDiv + ") " : ((beam.armourDiv == "inf") ? "(inf) " : " ")) + beam.type;
+                }
+
+                lab_numacc.Text = (beam.accMult * conf.accMult).ToString();
+
+                range = Decimal.ToDouble(dmg * dmg) * beam.rangeMult * foc.range;
+                lab_numrange.Text = (range).ToString() + "/" + (range * 3).ToString();
+
+                lab_numrof.Text = gen.rof.ToString();
+
+                lab_numshots.Text = Math.Floor(Double.Parse(lab_numbaseshots.Text) / Math.Pow( Decimal.ToDouble(dmg), 3)).ToString() + "(" + ((cellIndex > 2 ? 5 : 3) * num_numcells.Value).ToString() + ")";
+
+                lab_numweaponweight.Text = (num_emptyweight.Value + Decimal.Parse(lab_numcellweight.Text)).ToString("0.##");
+
+                lab_numST.Text = (Math.Sqrt(Double.Parse(lab_numweaponweight.Text)) * conf.stmult).ToString("0");
+
+                lab_numbulk.Text = "-" + (Math.Sqrt(Double.Parse(lab_numweaponweight.Text)) * conf.bulkmult).ToString("0");
+
+                lab_numrcl.Text = box_beamtype.Text == "Plasma Gun" ? "2" : "1";
+
+                lab_numweaponcost.Text = "$" + (Decimal.ToDouble(num_emptyweight.Value) * beam.cost * gen.cost).ToString("0.##");
+
+                lab_numLC.Text = (beam.LC + (Double.Parse(lab_numweaponweight.Text) > 5 ? ((Double.Parse(lab_numweaponweight.Text) > 15) ? -2 : -1) : 0)).ToString();
+            }
+            catch (Exception e)
+            {
+
+            }
+        }
+
+        
     }
 
     public class Materials
@@ -963,6 +1278,80 @@ namespace Eidetic_Memory
             CW = w;
             CC = c;
             minDR = dr;
+        }
+    }
+
+    public class Beams
+    {
+        public int TL;
+        public int highTL;
+        public String armourDiv;
+        public String type;
+        public double weightDiv;
+        public double rangeMult;
+        public double shots1;
+        public double shots2;
+        public double shots3;
+        public double shots4;
+        public int LC;
+        public double cost;
+        public double accMult;
+
+        public Beams(int t, int ht, String div, String ty, double w, double r, double s1, double s2, double s3, double s4, int l, double c, double a)
+        {
+            TL = t;
+            highTL = ht;
+            armourDiv = div;
+            type = ty;
+            weightDiv = w;
+            rangeMult = r;
+            shots1 = s1;
+            shots2 = s2;
+            shots3 = s3;
+            shots4 = s4;
+            LC = l;
+            cost = c;
+            accMult = a;
+        }
+    }
+
+    public class Focuses
+    {
+        public double range;
+        public double weight;
+        
+        public Focuses(double r, double w)
+        {
+            range = r;
+            weight = w;
+        }
+    }
+
+    public class Generators
+    {
+        public int rof;
+        public double weight;
+        public int cost;
+
+        public Generators(int r, double w, int c)
+        {
+            rof = r;
+            weight = w;
+            cost = c;
+        }
+    }
+
+    public class Configurations
+    {
+        public double accMult;
+        public double stmult;
+        public double bulkmult;
+    
+        public Configurations(double a, double s, double b)
+        {
+            accMult = a;
+            stmult = s;
+            bulkmult = b;
         }
     }
 }
