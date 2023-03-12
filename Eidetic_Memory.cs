@@ -26,7 +26,7 @@ namespace Eidetic_Memory
             { "Laser-Ablative Polymer", new Materials(9, 0.018, 6, 150, 75, 128, 64, "—", "F,E", "F/O", "The full DR only applies against burning damage from lasers \n(including X-ray, gamma-ray, etc.).") },
             { "Magnetic Liquid Armour", new Materials(9, 0.032, 2, 200, 100, 90, 45, "—", "F", "F/O", "The full DR only applies against piercing and cutting damage.") },
             { "Reflec", new Materials(9, 0.005, 10000000, 150, 150, 833, 83, "—", "F", "F/O", "The armor’s DR only applies vs. microwave and (in cinematic games) \nvisible and near-infrared laser beams. It has 0 DR vs. other damage types.") },
-            { "STF Liquid Armour", new Materials(9, 0.032, 1, 150, 75, 90, 45, "—", "F", "F/O", "") },
+            { "STF Liquid Armour", new Materials(9, 0.032, 3, 150, 75, 90, 45, "—", "F", "F/O", "") },
             { "Aramid Fabric", new Materials(8, 0.04, 4, 240, 240, 58, 24, "—", "F", "F/O", "The full DR only applies against piercing and cutting damage. \nThe #3/52 article MULTIPLIED damage vs pi and cut, in contrast to all other materials \nwhich DIVIDE against others. This was standardized to the other materials! Also, \nTL 6+ Construction methods were added in Pyramid #3/85, but I added them to this! \nIt's original is F/L not F/O!") },
             { "Ballistic Polymer", new Materials(8, 0.06, 2.5, 200, 50, 48, 24, "—", "F", "F/O", "The full DR only applies against piercing and cutting damage.") },
             { "Improved Ballistic Polymer",  new Materials(8, 0.04, 2.5, 250, 100, 75, 36, "—", "F", "F/O", "The full DR only applies against piercing and cutting damage.") },
